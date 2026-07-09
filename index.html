@@ -384,31 +384,38 @@
     </div>
 
     <script>
-        // Disparar Eventos do Meta Pixel e Google Analytics Simultaneamente sem travar o navegador
         function trackWA(event, element) {
-    if (event) event.preventDefault();
-    const url = element.href;
+            if (event) event.preventDefault();
+            const url = element.href;
+            let callbackCalled = false;
 
-    if (typeof fbq === 'function') {
-        fbq('track', 'Contact');
-    }
-
-    if (typeof gtag === 'function') {
-        gtag('event','generate_lead',{
-            event_category:'WhatsApp',
-            event_label:'Clique WhatsApp',
-            transport_type:'beacon',
-            event_callback:function(){
-                window.open(url,'_blank');
+            function redirectToWhatsApp() {
+                if (!callbackCalled) {
+                    callbackCalled = true;
+                    if (window.top && window.top !== window) {
+                        window.top.location.href = url;
+                    } else {
+                        window.location.href = url;
+                    }
+                }
             }
-        });
-        setTimeout(function(){window.open(url,'_blank');},1200);
-    } else {
-        window.open(url,'_blank');
-    }
-}
 
-// Lightbox Functions
+            if (typeof fbq === 'function') {
+                fbq('track', 'Contact');
+            }
+
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    'transport_type': 'beacon',
+                    'event_callback': redirectToWhatsApp
+                });
+                setTimeout(redirectToWhatsApp, 800);
+            } else {
+                redirectToWhatsApp();
+            }
+        }
+
+        // Lightbox Functions
         function openLightbox(src) {
             const lightbox = document.getElementById('lightbox');
             const img = document.getElementById('lightbox-img');
