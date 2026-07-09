@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Aguarde...</title>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-46H2TRPXJT"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config','G-46H2TRPXJT');
+
+function abrirWhatsapp(){
+
+gtag('event','generate_lead',{
+
+event_category:'WhatsApp',
+event_label:'Clique WhatsApp',
+
+transport_type:'beacon',
+
+event_callback:function(){
+
+window.location.replace(
+'https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento'
+);
+
+}
+
+});
+
+setTimeout(function(){
+
+window.location.replace(
+'https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento'
+);
+
+},1500);
+
+}
+
+window.onload=abrirWhatsapp;
+
+</script>
+
+<style>
+
+body{
+
+margin:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+font-family:Arial;
+
+background:#111;
+
+color:white;
+
+flex-direction:column;
+
+}
+
+.loader{
+
+width:55px;
+
+height:55px;
+
+border:6px solid #ddd;
+
+border-top:6px solid #25D366;
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+margin-bottom:25px;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="loader"></div>
+
+<h2>Aguarde...</h2>
+
+<p>Estamos abrindo o WhatsApp.</p>
+
+</body>
+</html>
