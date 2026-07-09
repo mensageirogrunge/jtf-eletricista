@@ -18,40 +18,53 @@ dataLayer.push(arguments);
 
 gtag('js', new Date());
 
-gtag('config','G-46H2TRPXJT');
+gtag('config', 'G-46H2TRPXJT');
+
 
 function abrirWhatsapp(){
 
-gtag('event','generate_lead',{
+    gtag('event', 'generate_lead', {
 
-event_category:'WhatsApp',
-event_label:'Clique WhatsApp',
+        send_to: 'G-46H2TRPXJT',
 
-transport_type:'beacon',
+        event_category: 'WhatsApp',
 
-event_callback:function(){
+        event_label: 'Clique WhatsApp',
 
-window.location.replace(
-'https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento'
-);
+        transport_type: 'beacon',
+
+        value: 1,
+
+        currency: 'BRL',
+
+        event_callback: function(){
+
+            window.location.replace(
+            'https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento'
+            );
+
+        }
+
+    });
+
+
+    // caso o callback não responda, garante o redirecionamento
+    setTimeout(function(){
+
+        window.location.replace(
+        'https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento'
+        );
+
+    }, 2000);
+
 
 }
 
-});
 
-setTimeout(function(){
-
-window.location.replace(
-'https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento'
-);
-
-},1500);
-
-}
-
-window.onload=abrirWhatsapp;
+window.onload = abrirWhatsapp;
 
 </script>
+
 
 <style>
 
@@ -109,6 +122,7 @@ transform:rotate(360deg);
 
 </head>
 
+
 <body>
 
 <div class="loader"></div>
@@ -118,4 +132,5 @@ transform:rotate(360deg);
 <p>Estamos abrindo o WhatsApp.</p>
 
 </body>
+
 </html>
