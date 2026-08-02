@@ -6,6 +6,14 @@
     <title>JTF Instalações Elétricas | Eletricista em Itapevi</title>
     <meta name="description" content="JTF Instalações Elétricas. Serviços especializados de eletricista em Itapevi. Instalações, reparos, quadros de energia, curto-circuito e manutenção residencial. Atendimento ágil e seguro.">
     
+    <!-- Preconnect e Preload para ganho de velocidade de rede -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1">
+
+    <!-- Google Fonts Carregamento Otimizado -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="JTF Instalações Elétricas | Eletricista em Itapevi">
     <meta property="og:description" content="Serviços elétricos profissionais. Atendimento em Itapevi e região. Segurança e garantia para sua casa.">
@@ -29,45 +37,29 @@
     }
     </script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Google Analytics (gtag.js) -->
+    <!-- Google Analytics (Diferido) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-46H2TRPXJT"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-46H2TRPXJT', {send_page_view:true});
     </script>
 
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code (Diferido) -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;
-    n.push=n;
-    n.loaded=!0;
-    n.version='2.0';
-    n.queue=[];
-    t=b.createElement(e);
-    t.async=!0;
-    t.src=v;
-    s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s);
-    }
-    (window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-
+    n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}
+    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1404418101709575');
     fbq('track', 'PageView');
     </script>
-    <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1404418101709575&ev=PageView&noscript=1"/>
-    </noscript>
 
     <style>
         :root {
@@ -76,121 +68,118 @@
             --accent: #25D366;
             --text: #ffffff;
             --text-light: #a0a0a0;
-            --glass: rgba(255, 255, 255, 0.03);
+            --glass: rgba(255, 255, 255, 0.04);
             --border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         /* Reset e Base */
-        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 
         /* Estrutura Geral */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        section { padding: 100px 0 40px 0; }
+        section { padding: 80px 0 30px 0; contain: content; }
         .section-title { font-size: 2.5rem; color: #ffffff; margin-bottom: 40px; position: relative; font-weight: 700; }
         .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--primary); margin-top: 10px; border-radius: 2px; }
 
         /* Botões */
-        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 16px 32px; background: var(--accent); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 1rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; border: none; text-align: center; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3); }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); filter: brightness(1.1); }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 16px 32px; background: var(--accent); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 1rem; transition: transform 0.2s ease, box-shadow 0.2s ease; cursor: pointer; border: none; text-align: center; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); }
 
-        /* Menu Fixo Transparente */
-        header { position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(10, 15, 20, 0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: var(--border); padding: 15px 0; transition: background 0.3s; }
+        /* Menu Fixo - Otimizado sem blur excessivo */
+        header { position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(10, 15, 20, 0.92); border-bottom: var(--border); padding: 15px 0; }
         nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo img { height: 45px; display: block; border-radius: 6px; }
+        .logo img { width: 120px; height: auto; aspect-ratio: 120/45; display: block; border-radius: 6px; }
 
         /* Hero */
-        #hero { min-height: 100vh; display: flex; align-items: center; padding-top: 140px; padding-bottom: 60px; }
+        #hero { min-height: 90vh; display: flex; align-items: center; padding-top: 120px; padding-bottom: 40px; }
         .hero-wrapper { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; width: 100%; }
         .hero-content { flex: 1.2; min-width: 320px; }
         .hero-image { flex: 0.8; min-width: 320px; text-align: center; display: flex; justify-content: center; }
         
         .tagline { color: var(--primary); text-transform: uppercase; font-weight: 700; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 12px; display: block; }
-        h1 { font-size: 3.8rem; line-height: 1.15; margin-bottom: 24px; color: #ffffff; font-weight: 700; }
+        h1 { font-size: 3.5rem; line-height: 1.15; margin-bottom: 24px; color: #ffffff; font-weight: 700; }
         h1 span { color: var(--primary); }
         .hero-text { font-size: 1.15rem; color: var(--text-light); margin-bottom: 36px; max-width: 580px; }
         
-        .hero-image img { width: 100%; max-width: 380px; height: auto; border-radius: 24px; border: 1px solid rgba(249, 115, 22, 0.3); box-shadow: 0 20px 50px rgba(249, 115, 22, 0.15); object-fit: cover; }
+        .hero-image img { width: 100%; max-width: 380px; height: auto; aspect-ratio: 380/480; border-radius: 24px; border: 1px solid rgba(249, 115, 22, 0.3); box-shadow: 0 20px 50px rgba(249, 115, 22, 0.15); object-fit: cover; }
 
         /* Cards de Serviços Grid */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .card { background: var(--glass); padding: 40px 30px; border-radius: 16px; border: var(--border); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; justify-content: space-between; }
-        .card:hover { transform: translateY(-8px); border-color: rgba(249, 115, 22, 0.4); box-shadow: 0 12px 30px rgba(249, 115, 22, 0.1); background: rgba(255, 255, 255, 0.05); }
+        .card { background: var(--glass); padding: 32px 24px; border-radius: 16px; border: var(--border); transition: transform 0.2s ease, border-color 0.2s ease; display: flex; flex-direction: column; justify-content: space-between; }
+        .card:hover { transform: translateY(-4px); border-color: rgba(249, 115, 22, 0.4); background: rgba(255, 255, 255, 0.06); }
         .card h3 { font-size: 1.35rem; color: #ffffff; margin-bottom: 12px; font-weight: 600; }
         .card p { color: var(--text-light); font-size: 0.95rem; }
 
         /* Galeria */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
         .gallery-item { height: 280px; overflow: hidden; border-radius: 16px; cursor: pointer; border: var(--border); position: relative; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-        .gallery-item:hover img { transform: scale(1.08); }
-        .gallery-overlay { position: absolute; inset: 0; background: rgba(10, 15, 20, 0.4); opacity: 0; transition: opacity 0.3s; display: flex; align-items: center; justify-content: center; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-overlay { position: absolute; inset: 0; background: rgba(10, 15, 20, 0.4); opacity: 0; transition: opacity 0.2s; display: flex; align-items: center; justify-content: center; }
         .gallery-item:hover .gallery-overlay { opacity: 1; }
 
         /* Lightbox */
-        #lightbox { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(6, 9, 12, 0.95); z-index: 2000; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; backdrop-filter: blur(10px); }
+        #lightbox { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(6, 9, 12, 0.95); z-index: 2000; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.2s ease; }
         #lightbox.active { display: flex; opacity: 1; }
-        #lightbox img { max-width: 90%; max-height: 85vh; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); transform: scale(0.95); transition: transform 0.3s ease; }
-        #lightbox.active img { transform: scale(1); }
+        #lightbox img { max-width: 90%; max-height: 85vh; border-radius: 12px; }
 
         /* Seção CTA */
-        #cta { background: linear-gradient(135deg, #F97316 0%, #C2410C 100%); padding: 80px 40px; text-align: center; border-radius: 24px; margin: 60px 0; box-shadow: 0 20px 40px rgba(249, 115, 22, 0.2); }
-        #cta h2 { color: white; font-size: 2.8rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -1px; line-height: 1.2; }
-        #cta p { color: rgba(255, 255, 255, 0.9); font-size: 1.2rem; margin-bottom: 36px; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .btn-dark { background: #0A0F14; color: white; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4); }
-        .btn-dark:hover { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); background: #111823; }
+        #cta { background: linear-gradient(135deg, #F97316 0%, #C2410C 100%); padding: 60px 30px; text-align: center; border-radius: 24px; margin: 40px 0; }
+        #cta h2 { color: white; font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; }
+        #cta p { color: rgba(255, 255, 255, 0.9); font-size: 1.15rem; margin-bottom: 32px; max-width: 600px; margin: 0 auto 32px auto; }
+        .btn-dark { background: #0A0F14; color: white; }
+        .btn-dark:hover { background: #111823; }
 
         /* Diferenciais */
         .diff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .diff-card { background: var(--glass); padding: 30px; border-radius: 16px; border: var(--border); }
+        .diff-card { background: var(--glass); padding: 24px; border-radius: 16px; border: var(--border); }
         .diff-card h4 { font-size: 1.2rem; color: var(--primary); margin-bottom: 8px; font-weight: 600; }
         .diff-card p { color: var(--text-light); font-size: 0.9rem; }
 
         /* Área de Atendimento */
-        .areas-wrapper { background: var(--glass); border: var(--border); border-radius: 16px; padding: 40px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
-        .area-tag { background: rgba(255,255,255,0.05); border: var(--border); padding: 10px 24px; border-radius: 50px; font-weight: 600; font-size: 1rem; color: #ffffff; transition: all 0.3s; }
-        .area-tag:hover { background: rgba(249, 115, 22, 0.1); border-color: var(--primary); color: var(--primary); }
+        .areas-wrapper { background: var(--glass); border: var(--border); border-radius: 16px; padding: 32px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        .area-tag { background: rgba(255,255,255,0.05); border: var(--border); padding: 8px 20px; border-radius: 50px; font-weight: 600; font-size: 0.95rem; color: #ffffff; }
 
         /* FAQ */
         .faq-wrapper { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
-        .faq-item { background: var(--glass); border: var(--border); border-radius: 12px; padding: 24px; cursor: pointer; transition: all 0.3s; }
-        .faq-item:hover { border-color: rgba(255,255,255,0.15); }
-        .faq-question { font-size: 1.1rem; font-weight: 600; color: #ffffff; display: flex; justify-content: space-between; align-items: center; }
-        .faq-question::after { content: '+'; color: var(--primary); font-size: 1.5rem; transition: transform 0.3s; }
-        .faq-item.active .faq-question::after { transform: rotate(45deg); }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; color: var(--text-light); font-size: 0.95rem; margin-top: 0; }
-        .faq-item.active .faq-answer { max-height: 100px; margin-top: 12px; }
+        .faq-item { background: var(--glass); border: var(--border); border-radius: 12px; padding: 20px; cursor: pointer; }
+        .faq-question { font-size: 1.05rem; font-weight: 600; color: #ffffff; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question::after { content: '+'; color: var(--primary); font-size: 1.5rem; }
+        .faq-item.active .faq-question::after { content: '-'; }
+        .faq-answer { display: none; color: var(--text-light); font-size: 0.95rem; margin-top: 12px; }
+        .faq-item.active .faq-answer { display: block; }
 
         /* Rodapé */
-        footer { padding: 60px 0; border-top: var(--border); margin-top: 60px; background: rgba(5, 8, 11, 0.5); }
-        .footer-wrapper { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px; }
+        footer { padding: 40px 0; border-top: var(--border); margin-top: 40px; background: rgba(5, 8, 11, 0.5); }
+        .footer-wrapper { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px; }
         .footer-info { max-width: 400px; }
         .footer-info p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 16px; }
-        .footer-phone { font-size: 1.3rem; color: #ffffff; font-weight: 700; display: block; margin-bottom: 20px; }
+        .footer-phone { font-size: 1.3rem; color: #ffffff; font-weight: 700; display: block; margin-bottom: 16px; text-decoration: none; }
 
         /* Botão Flutuante */
-        .floating-wa { position: fixed; bottom: 30px; right: 30px; z-index: 999; background: var(--accent); color: white; width: 60px; height: 60px; border-radius: 50px; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; text-decoration: none; }
-        .floating-wa:hover { transform: scale(1.1) translateY(-5px); }
-        .floating-wa svg { width: 30px; height: 30px; fill: white; }
+        .floating-wa { position: fixed; bottom: 24px; right: 24px; z-index: 999; background: var(--accent); color: white; width: 56px; height: 56px; border-radius: 50%; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); display: flex; align-items: center; justify-content: center; text-decoration: none; }
+        .floating-wa svg { width: 28px; height: 28px; fill: white; }
 
-        /* Animação de Scroll Reveal Config */
-        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        /* Animação Otimizada por GPU */
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; will-change: opacity, transform; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
         /* Responsividade */
         @media (max-width: 992px) {
-            h1 { font-size: 3rem; }
-            #hero { padding-top: 120px; text-align: center; }
-            .hero-wrapper { flex-direction: column-reverse; gap: 40px; }
+            h1 { font-size: 2.8rem; }
+            #hero { padding-top: 110px; text-align: center; }
+            .hero-wrapper { flex-direction: column-reverse; gap: 30px; }
             .hero-text { margin-left: auto; margin-right: auto; }
-            .section-title { font-size: 2.2rem; }
+            .section-title { font-size: 2rem; }
             .footer-wrapper { flex-direction: column; text-align: center; }
         }
 
         @media (max-width: 576px) {
-            h1 { font-size: 2.3rem; }
-            #cta h2 { font-size: 2rem; }
-            section { padding: 70px 0 30px 0; }
+            h1 { font-size: 2.2rem; }
+            #cta h2 { font-size: 1.8rem; }
+            section { padding: 50px 0 20px 0; }
         }
     </style>
 </head>
@@ -200,7 +189,7 @@
     <header>
         <div class="container nav">
             <div class="logo">
-                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&st=c64bttfj&raw=1" alt="Logo JTF Instalações Elétricas">
+                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&st=c64bttfj&raw=1" alt="Logo JTF Instalações Elétricas" width="120" height="45">
             </div>
             <a href="https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento&type=phone_number&app_absent=0" onclick="trackWA(event, this)" class="btn">Fazer Orçamento</a>
         </div>
@@ -213,11 +202,11 @@
                 <div class="hero-content">
                     <span class="tagline">Eletricista Profissional</span>
                     <h1>Eletricista em <span>Itapevi</span><br>JTF Instalações Elétricas</h1>
-                    <p class="hero-text">Procurando um eletricista em Itapevi? A JTF Instalações Elétricas offers serviços especializados para sua casa com segurança e rapidez. Atendemos toda a região de Itapevi e São Paulo seguindo rigorosas normas técnicas.</p>
+                    <p class="hero-text">Procurando um eletricista em Itapevi? A JTF Instalações Elétricas oferece serviços especializados para sua casa com segurança e rapidez. Atendemos toda a região de Itapevi e São Paulo seguindo rigorosas normas técnicas.</p>
                     <a href="https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento&type=phone_number&app_absent=0" onclick="trackWA(event, this)" class="btn">Solicitar Orçamento pelo WhatsApp</a>
                 </div>
                 <div class="hero-image">
-                    <img src="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1" alt="Profissional JTF Instalações Elétricas">
+                    <img src="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1" alt="Profissional JTF Instalações Elétricas" fetchpriority="high" width="380" height="480">
                 </div>
             </div>
         </section>
@@ -270,19 +259,19 @@
             <h2 class="section-title">Galeria de Serviços</h2>
             <div class="gallery-grid">
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="https://www.dropbox.com/scl/fi/ojasapfmkg0ohm0pa7ngq/WhatsApp-Image-2026-02-15-at-14.10.05.jpeg?rlkey=efcx0mjr0a5mpshwf3kb1omd1&st=i1lsy0f8&raw=1" alt="Instalação Elétrica JTF 1" loading="lazy">
+                    <img src="https://www.dropbox.com/scl/fi/ojasapfmkg0ohm0pa7ngq/WhatsApp-Image-2026-02-15-at-14.10.05.jpeg?rlkey=efcx0mjr0a5mpshwf3kb1omd1&st=i1lsy0f8&raw=1" alt="Instalação Elétrica JTF 1" loading="lazy" width="280" height="280">
                     <div class="gallery-overlay">🔍 Ampliar</div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="https://www.dropbox.com/scl/fi/lqgmhr3ncwe6gz5cpnp5d/WhatsApp-Image-2026-02-15-at-14.09.02.jpeg?rlkey=8ll4g9ms1f2h6wiaudw4eyxmj&st=x10rbybp&raw=1" alt="Instalação Elétrica JTF 2" loading="lazy">
+                    <img src="https://www.dropbox.com/scl/fi/lqgmhr3ncwe6gz5cpnp5d/WhatsApp-Image-2026-02-15-at-14.09.02.jpeg?rlkey=8ll4g9ms1f2h6wiaudw4eyxmj&st=x10rbybp&raw=1" alt="Instalação Elétrica JTF 2" loading="lazy" width="280" height="280">
                     <div class="gallery-overlay">🔍 Ampliar</div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="https://www.dropbox.com/scl/fi/rw16jndck62tpvfkzawru/WhatsApp-Image-2026-02-15-at-14.04.35.jpeg?rlkey=2tq0favcakuwq8jlywnhx16j5&st=n02c1obh&raw=1" alt="Instalação Elétrica JTF 3" loading="lazy">
+                    <img src="https://www.dropbox.com/scl/fi/rw16jndck62tpvfkzawru/WhatsApp-Image-2026-02-15-at-14.04.35.jpeg?rlkey=2tq0favcakuwq8jlywnhx16j5&st=n02c1obh&raw=1" alt="Instalação Elétrica JTF 3" loading="lazy" width="280" height="280">
                     <div class="gallery-overlay">🔍 Ampliar</div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="https://www.dropbox.com/scl/fi/krxx9k86t781dd30n7b1z/WhatsApp-Image-2026-02-15-at-14.04.34-2.jpeg?rlkey=mfpcd39g9boz2z5vonzsazm4a&st=main807a&raw=1" alt="Instalação Elétrica JTF 4" loading="lazy">
+                    <img src="https://www.dropbox.com/scl/fi/krxx9k86t781dd30n7b1z/WhatsApp-Image-2026-02-15-at-14.04.34-2.jpeg?rlkey=mfpcd39g9boz2z5vonzsazm4a&st=main807a&raw=1" alt="Instalação Elétrica JTF 4" loading="lazy" width="280" height="280">
                     <div class="gallery-overlay">🔍 Ampliar</div>
                 </div>
             </div>
@@ -351,7 +340,7 @@
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">Vocês cobram taxa para realizar o orçamento?</div>
-                    <div class="faq-answer">Entre em contato pelo WhatsApp fornecendo detalhes e fotos do problem para fazermos uma pré-avaliação e orçamento totalmente transparente sem compromisso.</div>
+                    <div class="faq-answer">Entre em contato pelo WhatsApp fornecendo detalhes e fotos do problema para fazermos uma pré-avaliação e orçamento totalmente transparente sem compromisso.</div>
                 </div>
             </div>
         </section>
@@ -361,7 +350,7 @@
     <footer>
         <div class="container footer-wrapper">
             <div class="footer-info">
-                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&st=c64bttfj&raw=1" alt="Logo JTF Footer" style="height: 50px; margin-bottom: 20px; border-radius: 6px;">
+                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&st=c64bttfj&raw=1" alt="Logo JTF Footer" style="height: 50px; margin-bottom: 20px; border-radius: 6px;" width="133" height="50">
                 <p>JTF Instalações Elétricas – Segurança e confiança para todos os serviços elétricos no estado de São Paulo.</p>
             </div>
             <div>
@@ -409,17 +398,16 @@
                     'transport_type': 'beacon',
                     'event_callback': redirectToWhatsApp
                 });
-                setTimeout(redirectToWhatsApp, 800);
+                setTimeout(redirectToWhatsApp, 600);
             } else {
                 redirectToWhatsApp();
             }
         }
 
-        // Lightbox Functions
+        // Lightbox
         function openLightbox(src) {
             const lightbox = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            img.src = src;
+            document.getElementById('lightbox-img').src = src;
             lightbox.classList.add('active');
         }
         function closeLightbox() {
@@ -435,22 +423,18 @@
             }
         }
 
-        // Scroll Reveal Correto e Seguro
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealOnScroll = () => {
-            const triggerBottom = window.innerHeight * 0.9;
-            revealElements.forEach(el => {
-                const elTop = el.getBoundingClientRect().top;
-                if (elTop < triggerBottom) {
-                    el.classList.add('visible');
-                }
-            });
-        };
+        // Scroll Reveal Otimizado via IntersectionObserver
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
 
-        // Ativação Inicial e Eventos de Window
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', () => {
-            setTimeout(revealOnScroll, 150);
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         });
     </script>
 </body>
