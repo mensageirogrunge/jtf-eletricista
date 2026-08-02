@@ -6,12 +6,11 @@
     <title>JTF Instalações Elétricas | Eletricista em Itapevi</title>
     <meta name="description" content="JTF Instalações Elétricas. Serviços especializados de eletricista em Itapevi. Instalações, reparos, quadros de energia, curto-circuito e manutenção residencial.">
     
-    <!-- Conexões Prévias -->
+    <!-- Conexões Prévias Otimizadas -->
     <link rel="dns-prefetch" href="https://www.dropbox.com">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.dropbox.com" crossorigin>
 
-    <!-- Preload da Imagem Principal do Hero -->
+    <!-- Preload da Imagem Principal do Hero com fetchpriority alta -->
     <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1" fetchpriority="high">
 
     <!-- Open Graph -->
@@ -47,7 +46,7 @@
             --border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        /* Reset e Base */
+        /* Reset e Base - Fonte nativa de alto desempenho */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.5; overflow-x: hidden; }
@@ -90,7 +89,7 @@
 
         /* Galeria Mobile 2 Colunas */
         .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-        .gallery-item { height: 130px; overflow: hidden; border-radius: 10px; border: var(--border); position: relative; background: #121820; cursor: pointer; }
+        .gallery-item { height: 130px; overflow: hidden; border-radius: 10px; border: var(--border); position: relative; background: #121820; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
 
         /* Lightbox */
@@ -361,40 +360,76 @@
         <img id="lightbox-img" src="" alt="Imagem Ampliada">
     </div>
 
-    <!-- Scripts Otimizados e Rastreamento -->
+    <!-- Scripts de Tracking Ultra-Deferidos (Carregam apenas após interagir ou 3.5s) -->
     <script>
-        // Inicializa fila do Google Analytics sem bloquear a renderização (High Performance)
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', 'G-46H2TRPXJT');
+        var scriptsLoaded = false;
+        function loadAnalytics() {
+            if (scriptsLoaded) return;
+            scriptsLoaded = true;
 
-        // Carrega o script externo sem impactar no PageSpeed
-        (function() {
-            var script = document.createElement('script');
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-46H2TRPXJT';
-            script.async = true;
-            document.head.appendChild(script);
-        })();
+            // Google Analytics
+            var gtagScript = document.createElement('script');
+            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-46H2TRPXJT";
+            gtagScript.async = true;
+            document.head.appendChild(gtagScript);
 
-        // Rastreamento de conversão do WhatsApp
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-46H2TRPXJT', {send_page_view:true});
+
+            // Meta Pixel
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}
+            (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1404418101709575');
+            fbq('track', 'PageView');
+        }
+
+        // Carrega os scripts após scroll, toque ou timer de 3.5 segundos
+        window.addEventListener('scroll', loadAnalytics, {passive: true, once: true});
+        window.addEventListener('touchstart', loadAnalytics, {passive: true, once: true});
+        setTimeout(loadAnalytics, 3500);
+
         function trackWA(event, element) {
             if (event) event.preventDefault();
             const url = element.href;
-            
+            let callbackCalled = false;
+
+            function redirectToWhatsApp() {
+                if (!callbackCalled) {
+                    callbackCalled = true;
+                    if (window.top && window.top !== window) {
+                        window.top.location.href = url;
+                    } else {
+                        window.location.href = url;
+                    }
+                }
+            }
+
+            if (!scriptsLoaded) {
+                loadAnalytics();
+            }
+
+            if (typeof fbq === 'function') {
+                fbq('track', 'Contact');
+            }
+
             if (typeof gtag === 'function') {
                 gtag('event', 'generate_lead', {
                     'transport_type': 'beacon',
-                    'event_callback': function() {
-                        window.location.href = url;
-                    }
+                    'event_callback': redirectToWhatsApp
                 });
-                setTimeout(function() {
-                    window.location.href = url;
-                }, 400);
+                setTimeout(redirectToWhatsApp, 500);
             } else {
-                window.location.href = url;
+                redirectToWhatsApp();
             }
         }
 
@@ -403,7 +438,6 @@
             document.getElementById('lightbox-img').src = src;
             lightbox.classList.add('active');
         }
-
         function closeLightbox() {
             document.getElementById('lightbox').classList.remove('active');
         }
