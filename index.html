@@ -1,42 +1,412 @@
-<!-- Google Analytics Direct -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-46H2TRPXJT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTF Instalações Elétricas | Eletricista em Itapevi</title>
+    <meta name="description" content="JTF Instalações Elétricas. Serviços especializados de eletricista em Itapevi. Instalações, reparos, quadros de energia, curto-circuito e manutenção residencial.">
+    
+    <!-- Conexões Prévias -->
+    <link rel="dns-prefetch" href="https://www.dropbox.com">
+    <link rel="preconnect" href="https://www.dropbox.com" crossorigin>
 
-  gtag('config', 'G-46H2TRPXJT');
+    <!-- Google Analytics Direct -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-46H2TRPXJT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-46H2TRPXJT');
+    </script>
 
-  function trackWA(event, element) {
-      if (event) event.preventDefault();
-      const url = element.href;
-      
-      gtag('event', 'generate_lead', {
-          'transport_type': 'beacon',
-          'event_callback': function() {
-              window.location.href = url;
-          }
-      });
-      
-      setTimeout(function() {
-          window.location.href = url;
-      }, 500);
-  }
+    <!-- Preload da Imagem Principal do Hero -->
+    <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1" fetchpriority="high">
 
-  function openLightbox(src) {
-      const lightbox = document.getElementById('lightbox');
-      document.getElementById('lightbox-img').src = src;
-      lightbox.classList.add('active');
-  }
-  function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('active');
-  }
+    <!-- Open Graph -->
+    <meta property="og:title" content="JTF Instalações Elétricas | Eletricista em Itapevi">
+    <meta property="og:description" content="Serviços elétricos profissionais. Atendimento em Itapevi e região. Segurança e garantia para sua casa.">
+    <meta property="og:type" content="website">
 
-  function toggleFaq(element) {
-      const isActive = element.classList.contains('active');
-      document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
-      if (!isActive) {
-          element.classList.add('active');
-      }
-  }
-</script>
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "JTF Instalações Elétricas",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Itapevi",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "telephone": "+5511993340680",
+      "url": "#"
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #0A0F14;
+            --primary: #F97316;
+            --accent: #25D366;
+            --text: #ffffff;
+            --text-light: #a0a0a0;
+            --glass: rgba(255, 255, 255, 0.04);
+            --border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Reset e Base */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.5; overflow-x: hidden; }
+
+        /* Estrutura Geral */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+        section { padding: 36px 0 12px 0; content-visibility: auto; contain-intrinsic-size: 1px 400px; }
+        #hero { content-visibility: visible; contain-intrinsic-size: auto; }
+
+        .section-title { font-size: 1.65rem; color: #ffffff; margin-bottom: 18px; position: relative; font-weight: 700; }
+        .section-title::after { content: ''; display: block; width: 36px; height: 4px; background: var(--primary); margin-top: 6px; border-radius: 2px; }
+
+        /* Botões */
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 20px; background: var(--accent); color: #ffffff; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 0.95rem; cursor: pointer; border: none; text-align: center; width: 100%; max-width: 320px; }
+
+        /* Menu Fixo */
+        header { position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(10, 15, 20, 0.96); border-bottom: var(--border); padding: 8px 0; height: 56px; }
+        nav { display: flex; justify-content: space-between; align-items: center; height: 100%; }
+        .logo img { width: 90px; height: 35px; display: block; border-radius: 6px; object-fit: contain; }
+        header .btn { width: auto; padding: 8px 14px; font-size: 0.8rem; }
+
+        /* Hero Section Mobile First */
+        #hero { padding-top: 72px; padding-bottom: 16px; }
+        .hero-wrapper { display: flex; flex-direction: column; gap: 16px; width: 100%; }
+        .hero-content { width: 100%; }
+        .hero-image { width: 100%; display: flex; justify-content: center; min-height: 280px; }
+        
+        .tagline { color: var(--primary); text-transform: uppercase; font-weight: 700; font-size: 0.75rem; letter-spacing: 1.2px; margin-bottom: 6px; display: block; }
+        h1 { font-size: 1.75rem; line-height: 1.2; margin-bottom: 10px; color: #ffffff; font-weight: 700; }
+        h1 span { color: var(--primary); }
+        .hero-text { font-size: 0.92rem; color: var(--text-light); margin-bottom: 18px; }
+        
+        .hero-image img { width: 280px; height: 280px; border-radius: 16px; border: 1px solid rgba(249, 115, 22, 0.3); object-fit: cover; aspect-ratio: 1/1; }
+
+        /* Grid de Serviços */
+        .services-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+        .card { background: var(--glass); padding: 14px; border-radius: 12px; border: var(--border); }
+        .card h3 { font-size: 1.05rem; color: #ffffff; margin-bottom: 4px; font-weight: 600; }
+        .card p { color: var(--text-light); font-size: 0.83rem; }
+
+        /* Galeria Mobile 2 Colunas */
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .gallery-item { height: 130px; overflow: hidden; border-radius: 10px; border: var(--border); position: relative; background: #121820; cursor: pointer; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Lightbox */
+        #lightbox { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(6, 9, 12, 0.95); z-index: 2000; justify-content: center; align-items: center; }
+        #lightbox.active { display: flex; }
+        #lightbox img { max-width: 90%; max-height: 80vh; border-radius: 8px; }
+
+        /* CTA */
+        #cta { background: linear-gradient(135deg, #F97316 0%, #C2410C 100%); padding: 22px 16px; text-align: center; border-radius: 14px; margin: 16px 0; }
+        #cta h2 { color: #ffffff; font-size: 1.35rem; font-weight: 700; margin-bottom: 6px; }
+        #cta p { color: rgba(255, 255, 255, 0.9); font-size: 0.85rem; margin-bottom: 16px; }
+        .btn-dark { background: #0A0F14; color: #ffffff; }
+
+        /* Diferenciais */
+        .diff-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
+        .diff-card { background: var(--glass); padding: 12px 14px; border-radius: 10px; border: var(--border); }
+        .diff-card h4 { font-size: 0.95rem; color: var(--primary); margin-bottom: 2px; font-weight: 600; }
+        .diff-card p { color: var(--text-light); font-size: 0.8rem; }
+
+        /* Área de Atendimento */
+        .areas-wrapper { background: var(--glass); border: var(--border); border-radius: 12px; padding: 14px; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+        .area-tag { background: rgba(255,255,255,0.05); border: var(--border); padding: 5px 12px; border-radius: 50px; font-weight: 600; font-size: 0.8rem; color: #ffffff; }
+
+        /* FAQ */
+        .faq-wrapper { display: flex; flex-direction: column; gap: 8px; }
+        .faq-item { background: var(--glass); border: var(--border); border-radius: 10px; padding: 12px 14px; cursor: pointer; }
+        .faq-question { font-size: 0.88rem; font-weight: 600; color: #ffffff; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+        .faq-question::after { content: '+'; color: var(--primary); font-size: 1.2rem; }
+        .faq-item.active .faq-question::after { content: '-'; }
+        .faq-answer { display: none; color: var(--text-light); font-size: 0.8rem; margin-top: 6px; }
+        .faq-item.active .faq-answer { display: block; }
+
+        /* Rodapé */
+        footer { padding: 20px 0; border-top: var(--border); margin-top: 20px; background: rgba(5, 8, 11, 0.5); content-visibility: auto; }
+        .footer-wrapper { display: flex; flex-direction: column; text-align: center; gap: 14px; align-items: center; }
+        .footer-info p { color: var(--text-light); font-size: 0.78rem; margin-bottom: 6px; }
+        .footer-phone { font-size: 1.05rem; color: #ffffff; font-weight: 700; display: block; margin-bottom: 6px; text-decoration: none; }
+
+        /* Botão Flutuante */
+        .floating-wa { position: fixed; bottom: 16px; right: 16px; z-index: 999; background: var(--accent); color: #ffffff; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+        .floating-wa svg { width: 22px; height: 22px; fill: #ffffff; }
+
+        /* --- Telas Maiores (Desktop) --- */
+        @media (min-width: 768px) {
+            .container { padding: 0 24px; }
+            section { padding: 60px 0 24px 0; }
+            .section-title { font-size: 2.2rem; margin-bottom: 32px; }
+            .section-title::after { width: 50px; }
+            .btn { width: auto; max-width: none; font-size: 1rem; padding: 16px 32px; }
+            
+            header { padding: 10px 0; height: 64px; }
+            .logo img { width: 110px; height: 42px; }
+            header .btn { padding: 10px 22px; font-size: 0.9rem; }
+
+            #hero { padding-top: 100px; padding-bottom: 30px; }
+            .hero-wrapper { flex-direction: row; gap: 40px; align-items: center; }
+            .hero-content { flex: 1.2; }
+            .hero-image { flex: 0.8; min-height: 340px; }
+            h1 { font-size: 3rem; margin-bottom: 18px; }
+            .hero-text { font-size: 1.05rem; margin-bottom: 26px; }
+            .hero-image img { width: 340px; height: 340px; }
+
+            .services-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+            .card { padding: 22px; }
+            .card h3 { font-size: 1.2rem; }
+            .card p { font-size: 0.88rem; }
+
+            .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+            .gallery-item { height: 220px; }
+
+            #cta { padding: 44px 28px; margin: 32px 0; }
+            #cta h2 { font-size: 2rem; }
+            #cta p { font-size: 1rem; }
+
+            .diff-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+            .diff-card { padding: 18px; }
+
+            .areas-wrapper { padding: 24px; gap: 10px; }
+            .area-tag { padding: 8px 18px; font-size: 0.9rem; }
+
+            footer { padding: 36px 0; }
+            .footer-wrapper { flex-direction: row; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Fixo -->
+    <header>
+        <div class="container nav">
+            <div class="logo">
+                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&st=c64bttfj&raw=1" alt="Logo JTF Instalações Elétricas" width="90" height="35" decoding="async">
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento&type=phone_number&app_absent=0" onclick="trackWA(event, this)" class="btn">Fazer Orçamento</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <span class="tagline">Eletricista Profissional</span>
+                    <h1>Eletricista em <span>Itapevi</span><br>JTF Instalações Elétricas</h1>
+                    <p class="hero-text">Procurando um eletricista em Itapevi? A JTF Instalações Elétricas oferece serviços especializados para sua casa com segurança e rapidez. Atendemos toda a região de Itapevi e São Paulo seguindo rigorosas normas técnicas.</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento&type=phone_number&app_absent=0" onclick="trackWA(event, this)" class="btn">Solicitar Orçamento no WhatsApp</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1" alt="Profissional JTF Instalações Elétricas" width="280" height="280" fetchpriority="high" decoding="async">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="card">
+                    <h3>Troca de chuveiros</h3>
+                    <p>Substituição de chuveiros e duchas de qualquer marca com dimensionamento correto dos fios e disjuntores para evitar queimas.</p>
+                </div>
+                <div class="card">
+                    <h3>Tomadas</h3>
+                    <p>Instalação de novas tomadas residenciais, adequação para o novo padrão e substituição de peças antigas ou danificadas.</p>
+                </div>
+                <div class="card">
+                    <h3>Interruptores</h3>
+                    <p>Manutenção e instalação de interruptores simples, paralelos (three-way) e intermediários com acabamento impecável.</p>
+                </div>
+                <div class="card">
+                    <h3>Fiação</h3>
+                    <p>Troca completa ou parcial de fiação elétrica residencial antiga, evitando superaquecimento e reduzindo a conta de luz.</p>
+                </div>
+                <div class="card">
+                    <h3>Iluminação</h3>
+                    <p>Projetos de iluminação, instalação de painéis LED, fitas decorativas, lustres, spots e luminárias externas.</p>
+                </div>
+                <div class="card">
+                    <h3>Quadro de distribuição</h3>
+                    <p>Montagem, organização e modernização de quadros elétricos residenciais, garantindo a distribuição de energia correta.</p>
+                </div>
+                <div class="card">
+                    <h3>Disjuntores</h3>
+                    <p>Dimensionamento e troca de disjuntores gerais e individuais para proteção ideal contra sobrecargas na rede elétrica.</p>
+                </div>
+                <div class="card">
+                    <h3>Curto-circuito</h3>
+                    <p>Identificação ágil e reparo definitivo de problemas de curto-circuito que fazem os disjuntores caírem constantemente.</p>
+                </div>
+                <div class="card">
+                    <h3>Emergências</h3>
+                    <p>Diagnósticos emergenciais para falta de energia parcial, cheiro de queimado ou tomadas faiscando na sua residência.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2 class="section-title">Galeria de Serviços</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="https://www.dropbox.com/scl/fi/ojasapfmkg0ohm0pa7ngq/WhatsApp-Image-2026-02-15-at-14.10.05.jpeg?rlkey=efcx0mjr0a5mpshwf3kb1omd1&st=i1lsy0f8&raw=1" alt="Instalação Elétrica JTF 1" loading="lazy" width="200" height="130" decoding="async">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="https://www.dropbox.com/scl/fi/lqgmhr3ncwe6gz5cpnp5d/WhatsApp-Image-2026-02-15-at-14.09.02.jpeg?rlkey=8ll4g9ms1f2h6wiaudw4eyxmj&st=x10rbybp&raw=1" alt="Instalação Elétrica JTF 2" loading="lazy" width="200" height="130" decoding="async">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="https://www.dropbox.com/scl/fi/rw16jndck62tpvfkzawru/WhatsApp-Image-2026-02-15-at-14.04.35.jpeg?rlkey=2tq0favcakuwq8jlywnhx16j5&st=n02c1obh&raw=1" alt="Instalação Elétrica JTF 3" loading="lazy" width="200" height="130" decoding="async">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="https://www.dropbox.com/scl/fi/krxx9k86t781dd30n7b1z/WhatsApp-Image-2026-02-15-at-14.04.34-2.jpeg?rlkey=mfpcd39g9boz2z5vonzsazm4a&st=main807a&raw=1" alt="Instalação Elétrica JTF 4" loading="lazy" width="200" height="130" decoding="async">
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta-section">
+            <div id="cta">
+                <h2>Segurança elétrica não se deixa para depois!</h2>
+                <p>Evite panes elétricas e curtos perigosos. Faça uma revisão imediata no sistema da sua residência com quem entende do assunto.</p>
+                <a href="https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento&type=phone_number&app_absent=0" onclick="trackWA(event, this)" class="btn btn-dark">Falar com Especialista</a>
+            </div>
+        </section>
+
+        <!-- Diferenciais Section -->
+        <section id="diferenciais">
+            <h2 class="section-title">Nossos Diferenciais</h2>
+            <div class="diff-grid">
+                <div class="diff-card">
+                    <h4>⚡ Atendimento Rápido</h4>
+                    <p>Agilidade máxima para restabelecer a segurança e o conforto do seu lar.</p>
+                </div>
+                <div class="diff-card">
+                    <h4>🛠️ Profissional Qualificado</h4>
+                    <p>Serviços executados dentro de todas as normas técnicas vigentes (NBR 5410).</p>
+                </div>
+                <div class="diff-card">
+                    <h4>📋 Orçamento Transparente</h4>
+                    <p>Preço justo combinado antes do início da execução, sem taxas surpresas.</p>
+                </div>
+                <div class="diff-card">
+                    <h4>🔒 Segurança</h4>
+                    <p>Procedimentos controlados para resguardar sua família e o patrimônio.</p>
+                </div>
+                <div class="diff-card">
+                    <h4>✅ Garantia</h4>
+                    <p>Tranquilidade total com garantia estendida em todas as mão de obra efetuadas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Área de Atendimento -->
+        <section id="atendimento">
+            <h2 class="section-title">Áreas de Atendimento</h2>
+            <div class="areas-wrapper">
+                <span class="area-tag">Itapevi</span>
+                <span class="area-tag">Jandira</span>
+                <span class="area-tag">Barueri</span>
+                <span class="area-tag">Carapicuíba</span>
+                <span class="area-tag">Osasco</span>
+                <span class="area-tag">São Paulo</span>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-wrapper">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Qual o risco de manter disjuntores desarmando frequentemente?</div>
+                    <div class="faq-answer">O disjuntor desarma quando há sobrecarga ou curto-circuito na instalação. Forçá-lo ou ignorar esse aviso pode superaquecer a fiação e causar incêndios graves na residência.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">De quanto em quanto tempo devo fazer manutenção elétrica na minha casa?</div>
+                    <div class="faq-answer">O recomendado para imóveis residenciais é realizar uma inspeção completa e preventiva a cada 5 anos para avaliar o estado dos cabos, tomadas e conexões do quadro.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Vocês cobram taxa para realizar o orçamento?</div>
+                    <div class="faq-answer">Entre em contato pelo WhatsApp fornecendo detalhes e fotos do problema para fazermos uma pré-avaliação e orçamento totalmente transparente sem compromisso.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container footer-wrapper">
+            <div class="footer-info">
+                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&st=c64bttfj&raw=1" alt="Logo JTF Footer" width="100" height="40" decoding="async" style="margin-bottom: 12px; border-radius: 6px;">
+                <p>JTF Instalações Elétricas – Segurança e confiança para todos os serviços elétricos no estado de São Paulo.</p>
+            </div>
+            <div>
+                <a href="tel:11993340680" class="footer-phone">(11) 99334-0680</a>
+                <a href="https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento&type=phone_number&app_absent=0" onclick="trackWA(event, this)" class="btn">Chamar no WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento&type=phone_number&app_absent=0" onclick="trackWA(event, this)" class="floating-wa" aria-label="Contato via WhatsApp">
+        <svg viewBox="0 0 32 32">
+            <path d="M16 2a13 13 0 0 0-11.26 19.52L3 29l7.71-2A13 13 0 1 0 16 2zm6.79 18.57c-.31.87-1.52 1.6-2.09 1.71s-1.12.22-3.8-1a14.73 14.73 0 0 1-6-5.26 6.3 6.3 0 0 1-1.3-3.41 3.48 3.48 0 0 1 1.1-2.61c.23-.23.5-.29.66-.29h.47c.15 0 .36 0 .55.44l.89 2.14c.08.18.13.39.01.62l-.54.68c-.12.15-.24.31-.1.55a9.41 9.41 0 0 0 1.71 2.12 8.07 8.07 0 0 0 2.5 1.55c.24.12.38.1.52-.06l.76-.89c.14-.17.3-.14.49-.07l2.31 1.09c.19.1.32.15.37.24a1.62 1.62 0 0 1-.1.82z"/>
+        </svg>
+    </a>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Imagem Ampliada">
+    </div>
+
+    <!-- Scripts de Interatividade e Rastreamento de Cliques -->
+    <script>
+        function trackWA(event, element) {
+            if (event) event.preventDefault();
+            const url = element.href;
+            
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    'transport_type': 'beacon',
+                    'event_callback': function() {
+                        window.location.href = url;
+                    }
+                });
+                setTimeout(function() {
+                    window.location.href = url;
+                }, 500);
+            } else {
+                window.location.href = url;
+            }
+        }
+
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            document.getElementById('lightbox-img').src = src;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        function toggleFaq(element) {
+            const isActive = element.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+            if (!isActive) {
+                element.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
