@@ -10,9 +10,6 @@
     <link rel="dns-prefetch" href="https://www.dropbox.com">
     <link rel="preconnect" href="https://www.dropbox.com" crossorigin>
 
-    <!-- Preload da Imagem Principal do Hero -->
-    <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1" fetchpriority="high">
-
     <!-- Open Graph -->
     <meta property="og:title" content="JTF Instalações Elétricas | Eletricista em Itapevi">
     <meta property="og:description" content="Serviços elétricos profissionais. Atendimento em Itapevi e região. Segurança e garantia para sua casa.">
@@ -82,7 +79,7 @@
         /* Menu Fixo */
         header { position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(10, 15, 20, 0.96); border-bottom: var(--border); padding: 8px 0; height: 56px; }
         nav { display: flex; justify-content: space-between; align-items: center; height: 100%; }
-        .logo img { width: 90px; height: 35px; display: block; border-radius: 6px; object-fit: contain; }
+        .logo img { width: 90px; height: 35px; display: block; border-radius: 6px; object-fit: contain; background: #121820; }
         header .btn { width: auto; padding: 8px 14px; font-size: 0.8rem; }
 
         /* Hero Section */
@@ -96,7 +93,7 @@
         h1 span { color: var(--primary); }
         .hero-text { font-size: 0.92rem; color: var(--text-light); margin-bottom: 18px; }
         
-        .hero-image img { width: 280px; height: 280px; border-radius: 16px; border: 1px solid rgba(249, 115, 22, 0.3); object-fit: cover; aspect-ratio: 1/1; }
+        .hero-image img { width: 280px; height: 280px; border-radius: 16px; border: 1px solid rgba(249, 115, 22, 0.3); object-fit: cover; aspect-ratio: 1/1; background: #121820; }
 
         /* Grid de Serviços */
         .services-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
@@ -122,7 +119,7 @@
         .review-author { font-size: 0.82rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 6px; }
         .review-author::before { content: '✓'; display: inline-flex; justify-content: center; align-items: center; width: 16px; height: 16px; background: var(--accent); color: #fff; border-radius: 50%; font-size: 0.65rem; font-weight: bold; }
 
-        /* Formulário de Nova Avaliação */
+        /* Formulário de Avaliação */
         .add-review-box { background: var(--glass); padding: 20px; border-radius: 14px; border: 1px solid rgba(249, 115, 22, 0.3); }
         .add-review-box h3 { font-size: 1.1rem; color: #ffffff; margin-bottom: 8px; }
         .add-review-box p { font-size: 0.82rem; color: var(--text-light); margin-bottom: 14px; }
@@ -225,7 +222,7 @@
     <header>
         <div class="container nav">
             <div class="logo">
-                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&st=c64bttfj&raw=1" alt="Logo JTF Instalações Elétricas" width="90" height="35" decoding="async">
+                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&raw=1" alt="Logo JTF Instalações Elétricas" width="90" height="35" decoding="async" onerror="this.onerror=null;this.src='https://via.placeholder.com/90x35/121820/F97316?text=JTF+Eletrica';">
             </div>
             <a href="https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento&type=phone_number&app_absent=0" onclick="trackWA(event, this)" class="btn">Fazer Orçamento</a>
         </div>
@@ -242,7 +239,7 @@
                     <a href="https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento&type=phone_number&app_absent=0" onclick="trackWA(event, this)" class="btn">Solicitar Orçamento no WhatsApp</a>
                 </div>
                 <div class="hero-image">
-                    <img src="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1" alt="Profissional JTF Instalações Elétricas" width="280" height="280" fetchpriority="high" decoding="async">
+                    <img src="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&raw=1" alt="Profissional JTF Instalações Elétricas" width="280" height="280" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x300/121820/F97316?text=JTF+Instala%C3%A7%C3%B5es';">
                 </div>
             </div>
         </section>
@@ -295,25 +292,24 @@
             <h2 class="section-title">Galeria de Serviços</h2>
             <div class="gallery-grid">
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="https://www.dropbox.com/scl/fi/ojasapfmkg0ohm0pa7ngq/WhatsApp-Image-2026-02-15-at-14.10.05.jpeg?rlkey=efcx0mjr0a5mpshwf3kb1omd1&st=i1lsy0f8&raw=1" alt="Instalação Elétrica JTF 1" loading="lazy" width="200" height="130" decoding="async">
+                    <img src="https://www.dropbox.com/scl/fi/ojasapfmkg0ohm0pa7ngq/WhatsApp-Image-2026-02-15-at-14.10.05.jpeg?rlkey=efcx0mjr0a5mpshwf3kb1omd1&raw=1" alt="Instalação Elétrica JTF 1" loading="lazy" width="200" height="130" decoding="async" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x200/121820/F97316?text=Servi%C3%A7o+JTF+1';">
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="https://www.dropbox.com/scl/fi/lqgmhr3ncwe6gz5cpnp5d/WhatsApp-Image-2026-02-15-at-14.09.02.jpeg?rlkey=88ll4g9ms1f2h6wiaudw4eyxmj&st=x10rbybp&raw=1" alt="Instalação Elétrica JTF 2" loading="lazy" width="200" height="130" decoding="async">
+                    <img src="https://www.dropbox.com/scl/fi/lqgmhr3ncwe6gz5cpnp5d/WhatsApp-Image-2026-02-15-at-14.09.02.jpeg?rlkey=88ll4g9ms1f2h6wiaudw4eyxmj&raw=1" alt="Instalação Elétrica JTF 2" loading="lazy" width="200" height="130" decoding="async" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x200/121820/F97316?text=Servi%C3%A7o+JTF+2';">
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="https://www.dropbox.com/scl/fi/rw16jndck62tpvfkzawru/WhatsApp-Image-2026-02-15-at-14.04.35.jpeg?rlkey=2tq0favcakuwq8jlywnhx16j5&st=n02c1obh&raw=1" alt="Instalação Elétrica JTF 3" loading="lazy" width="200" height="130" decoding="async">
+                    <img src="https://www.dropbox.com/scl/fi/rw16jndck62tpvfkzawru/WhatsApp-Image-2026-02-15-at-14.04.35.jpeg?rlkey=2tq0favcakuwq8jlywnhx16j5&raw=1" alt="Instalação Elétrica JTF 3" loading="lazy" width="200" height="130" decoding="async" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x200/121820/F97316?text=Servi%C3%A7o+JTF+3';">
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="https://www.dropbox.com/scl/fi/krxx9k86t781dd30n7b1z/WhatsApp-Image-2026-02-15-at-14.04.34-2.jpeg?rlkey=mfpcd39g9boz2z5vonzsazm4a&st=main807a&raw=1" alt="Instalação Elétrica JTF 4" loading="lazy" width="200" height="130" decoding="async">
+                    <img src="https://www.dropbox.com/scl/fi/krxx9k86t781dd30n7b1z/WhatsApp-Image-2026-02-15-at-14.04.34-2.jpeg?rlkey=mfpcd39g9boz2z5vonzsazm4a&raw=1" alt="Instalação Elétrica JTF 4" loading="lazy" width="200" height="130" decoding="async" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x200/121820/F97316?text=Servi%C3%A7o+JTF+4';">
                 </div>
             </div>
         </section>
 
-        <!-- Avaliações dos Clientes com Formulário de Envio -->
+        <!-- Avaliações dos Clientes -->
         <section id="reviews">
             <h2 class="section-title">O que dizem nossos clientes</h2>
             
-            <!-- Lista de Depoimentos Existentes -->
             <div class="reviews-grid" id="reviews-list">
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
@@ -420,7 +416,7 @@
     <footer>
         <div class="container footer-wrapper">
             <div class="footer-info">
-                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&st=c64bttfj&raw=1" alt="Logo JTF Footer" width="100" height="40" decoding="async" style="margin-bottom: 12px; border-radius: 6px;">
+                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&raw=1" alt="Logo JTF Footer" width="100" height="40" decoding="async" style="margin-bottom: 12px; border-radius: 6px;" onerror="this.onerror=null;this.src='https://via.placeholder.com/100x40/121820/F97316?text=JTF+Eletrica';">
                 <p>JTF Instalações Elétricas – Segurança e confiança para todos os serviços elétricos no estado de São Paulo.</p>
             </div>
             <div>
@@ -444,7 +440,6 @@
 
     <!-- Scripts de Interatividade e Tracking -->
     <script>
-        // Lógica para Envio e Exibição de Avaliações
         function submitReview(event) {
             event.preventDefault();
             const rating = document.querySelector('input[name="rating"]:checked').value;
@@ -455,7 +450,6 @@
 
             const starsStr = '★'.repeat(rating) + '☆'.repeat(5 - rating);
 
-            // Criar card de avaliação dinâmico no HTML
             const reviewsList = document.getElementById('reviews-list');
             const newCard = document.createElement('div');
             newCard.className = 'review-card';
@@ -466,14 +460,12 @@
             `;
             reviewsList.appendChild(newCard);
 
-            // Redirecionar para envio no WhatsApp da JTF para registro oficial
             const waMsg = encodeURIComponent(`Olá, acabei de deixar uma avaliação no site!\n\nNome: ${name}\nAvaliação: ${rating} estrelas (${starsStr})\nDepoimento: "${text}"`);
             const waUrl = `https://api.whatsapp.com/send/?phone=5511993340680&text=${waMsg}`;
             
             alert('Obrigado pela sua avaliação! Vamos redirecioná-lo para o WhatsApp para confirmar o envio.');
             window.open(waUrl, '_blank');
 
-            // Resetar formulário
             document.getElementById('review-form').reset();
         }
 
