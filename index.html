@@ -18,7 +18,7 @@
     <meta property="og:description" content="Serviços elétricos profissionais. Atendimento em Itapevi e região. Segurança e garantia para sua casa.">
     <meta property="og:type" content="website">
 
-    <!-- Schema.org LocalBusiness -->
+    <!-- Schema.org LocalBusiness com Avaliações -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -31,7 +31,23 @@
         "addressCountry": "BR"
       },
       "telephone": "+5511993340680",
-      "url": "#"
+      "url": "#",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Anderson" },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "reviewBody": "Serviço excelente! Chamou a JTF para fazer a instalação do chuveiro aqui em casa, o serviço foi rápido, limpo e com total segurança."
+        }
+      ]
     }
     </script>
 
@@ -44,6 +60,7 @@
             --text-light: #a0a0a0;
             --glass: rgba(255, 255, 255, 0.04);
             --border: 1px solid rgba(255, 255, 255, 0.08);
+            --star: #FFD700;
         }
 
         /* Reset e Base - Fonte nativa de alto desempenho */
@@ -89,13 +106,21 @@
 
         /* Galeria Mobile 2 Colunas */
         .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-        .gallery-item { height: 130px; overflow: hidden; border-radius: 10px; border: var(--border); position: relative; background: #121820; }
+        .gallery-item { height: 130px; overflow: hidden; border-radius: 10px; border: var(--border); position: relative; background: #121820; cursor: pointer; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
 
         /* Lightbox */
         #lightbox { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(6, 9, 12, 0.95); z-index: 2000; justify-content: center; align-items: center; }
         #lightbox.active { display: flex; }
         #lightbox img { max-width: 90%; max-height: 80vh; border-radius: 8px; }
+
+        /* Depoimentos e Estrelas */
+        .reviews-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        .review-card { background: var(--glass); padding: 18px; border-radius: 12px; border: var(--border); position: relative; }
+        .stars { color: var(--star); font-size: 1.1rem; margin-bottom: 8px; }
+        .review-text { font-size: 0.88rem; color: var(--text); font-style: italic; margin-bottom: 10px; }
+        .review-author { font-size: 0.82rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 6px; }
+        .review-author::before { content: '✓'; display: inline-flex; justify-content: center; align-items: center; width: 16px; height: 16px; background: var(--accent); color: #fff; border-radius: 50%; font-size: 0.65rem; font-weight: bold; }
 
         /* CTA */
         #cta { background: linear-gradient(135deg, #F97316 0%, #C2410C 100%); padding: 22px 16px; text-align: center; border-radius: 14px; margin: 16px 0; }
@@ -159,6 +184,8 @@
 
             .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
             .gallery-item { height: 220px; }
+
+            .reviews-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 
             #cta { padding: 44px 28px; margin: 32px 0; }
             #cta h2 { font-size: 2rem; }
@@ -265,6 +292,18 @@
             </div>
         </section>
 
+        <!-- Avaliações dos Clientes -->
+        <section id="reviews">
+            <h2 class="section-title">O que dizem nossos clientes</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Gostei muito do atendimento! O pessoal da JTF instalou o chuveiro aqui em casa perfeitamente, com fiação correta e tudo bem testado. Recomendo demais!"</p>
+                    <div class="review-author">Anderson — Cliente Verificado</div>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section id="cta-section">
             <div id="cta">
@@ -360,7 +399,7 @@
         <img id="lightbox-img" src="" alt="Imagem Ampliada">
     </div>
 
-    <!-- Scripts de Tracking Ultra-Deferidos (Carregam apenas após interagir ou 3.5s) -->
+    <!-- Scripts de Tracking Ultra-Deferidos -->
     <script>
         var scriptsLoaded = false;
         function loadAnalytics() {
