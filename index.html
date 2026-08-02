@@ -10,7 +10,7 @@
     <link rel="dns-prefetch" href="https://www.dropbox.com">
     <link rel="preconnect" href="https://www.dropbox.com" crossorigin>
 
-    <!-- Preload da Imagem Principal do Hero com fetchpriority alta -->
+    <!-- Preload da Imagem Principal do Hero -->
     <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1" fetchpriority="high">
 
     <!-- Open Graph -->
@@ -63,7 +63,7 @@
             --star: #FFD700;
         }
 
-        /* Reset e Base - Fonte nativa de alto desempenho */
+        /* Reset e Base */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.5; overflow-x: hidden; }
@@ -85,7 +85,7 @@
         .logo img { width: 90px; height: 35px; display: block; border-radius: 6px; object-fit: contain; }
         header .btn { width: auto; padding: 8px 14px; font-size: 0.8rem; }
 
-        /* Hero Section Mobile First */
+        /* Hero Section */
         #hero { padding-top: 72px; padding-bottom: 16px; }
         .hero-wrapper { display: flex; flex-direction: column; gap: 16px; width: 100%; }
         .hero-content { width: 100%; }
@@ -104,7 +104,7 @@
         .card h3 { font-size: 1.05rem; color: #ffffff; margin-bottom: 4px; font-weight: 600; }
         .card p { color: var(--text-light); font-size: 0.83rem; }
 
-        /* Galeria Mobile 2 Colunas */
+        /* Galeria */
         .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
         .gallery-item { height: 130px; overflow: hidden; border-radius: 10px; border: var(--border); position: relative; background: #121820; cursor: pointer; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
@@ -114,13 +114,30 @@
         #lightbox.active { display: flex; }
         #lightbox img { max-width: 90%; max-height: 80vh; border-radius: 8px; }
 
-        /* Depoimentos e Estrelas */
-        .reviews-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        /* Depoimentos e Formulário de Avaliação */
+        .reviews-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 20px; }
         .review-card { background: var(--glass); padding: 18px; border-radius: 12px; border: var(--border); position: relative; }
         .stars { color: var(--star); font-size: 1.1rem; margin-bottom: 8px; }
         .review-text { font-size: 0.88rem; color: var(--text); font-style: italic; margin-bottom: 10px; }
         .review-author { font-size: 0.82rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 6px; }
         .review-author::before { content: '✓'; display: inline-flex; justify-content: center; align-items: center; width: 16px; height: 16px; background: var(--accent); color: #fff; border-radius: 50%; font-size: 0.65rem; font-weight: bold; }
+
+        /* Formulário de Nova Avaliação */
+        .add-review-box { background: var(--glass); padding: 20px; border-radius: 14px; border: 1px solid rgba(249, 115, 22, 0.3); }
+        .add-review-box h3 { font-size: 1.1rem; color: #ffffff; margin-bottom: 8px; }
+        .add-review-box p { font-size: 0.82rem; color: var(--text-light); margin-bottom: 14px; }
+        
+        .star-rating-input { display: flex; gap: 6px; margin-bottom: 14px; direction: rtl; justify-content: flex-end; width: fit-content; }
+        .star-rating-input input { display: none; }
+        .star-rating-input label { font-size: 1.8rem; color: #4a4a4a; cursor: pointer; transition: color 0.2s; }
+        .star-rating-input label:hover,
+        .star-rating-input label:hover ~ label,
+        .star-rating-input input:checked ~ label { color: var(--star); }
+
+        .form-group { margin-bottom: 12px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px 14px; background: rgba(0, 0, 0, 0.3); border: var(--border); border-radius: 8px; color: #fff; font-size: 0.88rem; font-family: inherit; }
+        .form-group textarea { resize: vertical; min-height: 80px; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
 
         /* CTA */
         #cta { background: linear-gradient(135deg, #F97316 0%, #C2410C 100%); padding: 22px 16px; text-align: center; border-radius: 14px; margin: 16px 0; }
@@ -157,7 +174,7 @@
         .floating-wa { position: fixed; bottom: 16px; right: 16px; z-index: 999; background: var(--accent); color: #ffffff; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; }
         .floating-wa svg { width: 22px; height: 22px; fill: #ffffff; }
 
-        /* --- Telas Maiores (Desktop) --- */
+        /* Desktop */
         @media (min-width: 768px) {
             .container { padding: 0 24px; }
             section { padding: 60px 0 24px 0; }
@@ -281,7 +298,7 @@
                     <img src="https://www.dropbox.com/scl/fi/ojasapfmkg0ohm0pa7ngq/WhatsApp-Image-2026-02-15-at-14.10.05.jpeg?rlkey=efcx0mjr0a5mpshwf3kb1omd1&st=i1lsy0f8&raw=1" alt="Instalação Elétrica JTF 1" loading="lazy" width="200" height="130" decoding="async">
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="https://www.dropbox.com/scl/fi/lqgmhr3ncwe6gz5cpnp5d/WhatsApp-Image-2026-02-15-at-14.09.02.jpeg?rlkey=8ll4g9ms1f2h6wiaudw4eyxmj&st=x10rbybp&raw=1" alt="Instalação Elétrica JTF 2" loading="lazy" width="200" height="130" decoding="async">
+                    <img src="https://www.dropbox.com/scl/fi/lqgmhr3ncwe6gz5cpnp5d/WhatsApp-Image-2026-02-15-at-14.09.02.jpeg?rlkey=88ll4g9ms1f2h6wiaudw4eyxmj&st=x10rbybp&raw=1" alt="Instalação Elétrica JTF 2" loading="lazy" width="200" height="130" decoding="async">
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
                     <img src="https://www.dropbox.com/scl/fi/rw16jndck62tpvfkzawru/WhatsApp-Image-2026-02-15-at-14.04.35.jpeg?rlkey=2tq0favcakuwq8jlywnhx16j5&st=n02c1obh&raw=1" alt="Instalação Elétrica JTF 3" loading="lazy" width="200" height="130" decoding="async">
@@ -292,15 +309,41 @@
             </div>
         </section>
 
-        <!-- Avaliações dos Clientes -->
+        <!-- Avaliações dos Clientes com Formulário de Envio -->
         <section id="reviews">
             <h2 class="section-title">O que dizem nossos clientes</h2>
-            <div class="reviews-grid">
+            
+            <!-- Lista de Depoimentos Existentes -->
+            <div class="reviews-grid" id="reviews-list">
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
                     <p class="review-text">"Gostei muito do atendimento! O pessoal da JTF instalou o chuveiro aqui em casa perfeitamente, com fiação correta e tudo bem testado. Recomendo demais!"</p>
                     <div class="review-author">Anderson — Cliente Verificado</div>
                 </div>
+            </div>
+
+            <!-- Formulário Interativo de Avaliação -->
+            <div class="add-review-box">
+                <h3>Deixe sua Avaliação</h3>
+                <p>Já utilizou nossos serviços? Selecione de 1 a 5 estrelas e conte como foi sua experiência!</p>
+                <form id="review-form" onsubmit="submitReview(event)">
+                    <div class="star-rating-input">
+                        <input type="radio" id="star5" name="rating" value="5" required /><label for="star5" title="5 estrelas">★</label>
+                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 estrelas">★</label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 estrelas">★</label>
+                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 estrelas">★</label>
+                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 estrela">★</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="reviewer-name" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="reviewer-text" placeholder="Escreva seu depoimento sobre nosso serviço..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="background: var(--primary); width: 100%;">Enviar Avaliação</button>
+                </form>
             </div>
         </section>
 
@@ -399,8 +442,41 @@
         <img id="lightbox-img" src="" alt="Imagem Ampliada">
     </div>
 
-    <!-- Scripts de Tracking Ultra-Deferidos -->
+    <!-- Scripts de Interatividade e Tracking -->
     <script>
+        // Lógica para Envio e Exibição de Avaliações
+        function submitReview(event) {
+            event.preventDefault();
+            const rating = document.querySelector('input[name="rating"]:checked').value;
+            const name = document.getElementById('reviewer-name').value.trim();
+            const text = document.getElementById('reviewer-text').value.trim();
+
+            if (!name || !text) return;
+
+            const starsStr = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+
+            // Criar card de avaliação dinâmico no HTML
+            const reviewsList = document.getElementById('reviews-list');
+            const newCard = document.createElement('div');
+            newCard.className = 'review-card';
+            newCard.innerHTML = `
+                <div class="stars">${starsStr}</div>
+                <p class="review-text">"${text}"</p>
+                <div class="review-author">${name} — Cliente Verificado</div>
+            `;
+            reviewsList.appendChild(newCard);
+
+            // Redirecionar para envio no WhatsApp da JTF para registro oficial
+            const waMsg = encodeURIComponent(`Olá, acabei de deixar uma avaliação no site!\n\nNome: ${name}\nAvaliação: ${rating} estrelas (${starsStr})\nDepoimento: "${text}"`);
+            const waUrl = `https://api.whatsapp.com/send/?phone=5511993340680&text=${waMsg}`;
+            
+            alert('Obrigado pela sua avaliação! Vamos redirecioná-lo para o WhatsApp para confirmar o envio.');
+            window.open(waUrl, '_blank');
+
+            // Resetar formulário
+            document.getElementById('review-form').reset();
+        }
+
         var scriptsLoaded = false;
         function loadAnalytics() {
             if (scriptsLoaded) return;
@@ -432,7 +508,6 @@
             fbq('track', 'PageView');
         }
 
-        // Carrega os scripts após scroll, toque ou timer de 3.5 segundos
         window.addEventListener('scroll', loadAnalytics, {passive: true, once: true});
         window.addEventListener('touchstart', loadAnalytics, {passive: true, once: true});
         setTimeout(loadAnalytics, 3500);
