@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JTF Instalações Elétricas | Eletricista em Itapevi</title>
-    <meta name="description" content="JTF Instalações Elétricas. Serviços especializados de eletricista em Itapevi. Instalações, reparos, quadros de energia, curto-circuito e manutenção residencial. Atendimento ágil e seguro.">
+    <meta name="description" content="JTF Instalações Elétricas. Serviços especializados de eletricista em Itapevi. Instalações, reparos, quadros de energia, curto-circuito e manutenção residencial.">
     
-    <!-- Preconnect e Preload -->
+    <!-- Otimização de Conexões Externas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1">
-
-    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://www.dropbox.com">
+    
+    <!-- Google Fonts Otimizado (com display=swap para não travar o texto) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
+    <!-- Preload da Imagem Principal (LCP) -->
+    <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1">
+
     <!-- Open Graph -->
     <meta property="og:title" content="JTF Instalações Elétricas | Eletricista em Itapevi">
     <meta property="og:description" content="Serviços elétricos profissionais. Atendimento em Itapevi e região. Segurança e garantia para sua casa.">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Schema.org LocalBusiness -->
     <script type="application/ld+json">
@@ -35,30 +37,6 @@
       "telephone": "+5511993340680",
       "url": "#"
     }
-    </script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-46H2TRPXJT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-46H2TRPXJT', {send_page_view:true});
-    </script>
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}
-    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1404418101709575');
-    fbq('track', 'PageView');
     </script>
 
     <style>
@@ -79,138 +57,126 @@
 
         /* Estrutura Geral */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
-        section { padding: 60px 0 20px 0; contain: content; }
-        .section-title { font-size: 2rem; color: #ffffff; margin-bottom: 24px; position: relative; font-weight: 700; }
-        .section-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--primary); margin-top: 8px; border-radius: 2px; }
+        section { padding: 50px 0 20px 0; contain: content; }
+        .section-title { font-size: 1.8rem; color: #ffffff; margin-bottom: 20px; position: relative; font-weight: 700; }
+        .section-title::after { content: ''; display: block; width: 40px; height: 4px; background: var(--primary); margin-top: 6px; border-radius: 2px; }
 
         /* Botões */
-        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 24px; background: var(--accent); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 0.95rem; transition: transform 0.2s ease, box-shadow 0.2s ease; cursor: pointer; border: none; text-align: center; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3); width: 100%; max-width: 320px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 20px; background: var(--accent); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 0.95rem; transition: transform 0.2s ease, box-shadow 0.2s ease; cursor: pointer; border: none; text-align: center; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3); width: 100%; max-width: 320px; }
         .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); }
 
         /* Menu Fixo */
-        header { position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(10, 15, 20, 0.95); border-bottom: var(--border); padding: 10px 0; }
+        header { position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(10, 15, 20, 0.95); border-bottom: var(--border); padding: 8px 0; }
         nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo img { width: 100px; height: auto; display: block; border-radius: 6px; }
-        header .btn { width: auto; padding: 10px 16px; font-size: 0.85rem; }
+        .logo img { width: 90px; height: auto; display: block; border-radius: 6px; }
+        header .btn { width: auto; padding: 8px 14px; font-size: 0.8rem; }
 
-        /* Hero Section */
-        #hero { min-height: auto; display: flex; align-items: center; padding-top: 90px; padding-bottom: 20px; }
-        .hero-wrapper { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; width: 100%; }
-        .hero-content { flex: 1.2; min-width: 100%; }
-        .hero-image { flex: 0.8; width: 100%; display: flex; justify-content: center; }
+        /* Hero Section Mobile First */
+        #hero { padding-top: 80px; padding-bottom: 20px; }
+        .hero-wrapper { display: flex; flex-direction: column; gap: 20px; width: 100%; }
+        .hero-content { width: 100%; }
+        .hero-image { width: 100%; display: flex; justify-content: center; }
         
-        .tagline { color: var(--primary); text-transform: uppercase; font-weight: 700; font-size: 0.8rem; letter-spacing: 1.5px; margin-bottom: 8px; display: block; }
-        h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 16px; color: #ffffff; font-weight: 700; }
+        .tagline { color: var(--primary); text-transform: uppercase; font-weight: 700; font-size: 0.75rem; letter-spacing: 1.2px; margin-bottom: 6px; display: block; }
+        h1 { font-size: 1.8rem; line-height: 1.2; margin-bottom: 12px; color: #ffffff; font-weight: 700; }
         h1 span { color: var(--primary); }
-        .hero-text { font-size: 1rem; color: var(--text-light); margin-bottom: 24px; }
+        .hero-text { font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px; }
         
-        .hero-image img { width: 100%; max-width: 320px; height: auto; border-radius: 16px; border: 1px solid rgba(249, 115, 22, 0.3); box-shadow: 0 10px 30px rgba(249, 115, 22, 0.15); object-fit: cover; }
+        .hero-image img { width: 100%; max-width: 300px; height: auto; border-radius: 16px; border: 1px solid rgba(249, 115, 22, 0.3); box-shadow: 0 10px 30px rgba(249, 115, 22, 0.15); object-fit: cover; }
 
-        /* Cards de Serviços Grid */
-        .services-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
-        .card { background: var(--glass); padding: 20px; border-radius: 12px; border: var(--border); }
-        .card h3 { font-size: 1.2rem; color: #ffffff; margin-bottom: 8px; font-weight: 600; }
-        .card p { color: var(--text-light); font-size: 0.9rem; }
+        /* Grid de Serviços */
+        .services-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        .card { background: var(--glass); padding: 16px; border-radius: 12px; border: var(--border); }
+        .card h3 { font-size: 1.1rem; color: #ffffff; margin-bottom: 6px; font-weight: 600; }
+        .card p { color: var(--text-light); font-size: 0.85rem; }
 
-        /* Galeria */
-        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .gallery-item { height: 160px; overflow: hidden; border-radius: 12px; cursor: pointer; border: var(--border); position: relative; }
+        /* Galeria Mobile 2 Colunas */
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .gallery-item { height: 140px; overflow: hidden; border-radius: 10px; cursor: pointer; border: var(--border); position: relative; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
-        .gallery-overlay { position: absolute; inset: 0; background: rgba(10, 15, 20, 0.4); opacity: 0; transition: opacity 0.2s; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; }
+        .gallery-overlay { position: absolute; inset: 0; background: rgba(10, 15, 20, 0.4); opacity: 0; transition: opacity 0.2s; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; }
         .gallery-item:hover .gallery-overlay { opacity: 1; }
 
         /* Lightbox */
-        #lightbox { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(6, 9, 12, 0.95); z-index: 2000; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.2s ease; }
-        #lightbox.active { display: flex; opacity: 1; }
-        #lightbox img { max-width: 95%; max-height: 80vh; border-radius: 8px; }
+        #lightbox { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(6, 9, 12, 0.95); z-index: 2000; justify-content: center; align-items: center; }
+        #lightbox.active { display: flex; }
+        #lightbox img { max-width: 90%; max-height: 80vh; border-radius: 8px; }
 
-        /* Seção CTA */
-        #cta { background: linear-gradient(135deg, #F97316 0%, #C2410C 100%); padding: 32px 20px; text-align: center; border-radius: 16px; margin: 30px 0; }
-        #cta h2 { color: white; font-size: 1.6rem; font-weight: 700; margin-bottom: 12px; }
-        #cta p { color: rgba(255, 255, 255, 0.9); font-size: 0.95rem; margin-bottom: 24px; }
+        /* CTA */
+        #cta { background: linear-gradient(135deg, #F97316 0%, #C2410C 100%); padding: 24px 16px; text-align: center; border-radius: 14px; margin: 20px 0; }
+        #cta h2 { color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+        #cta p { color: rgba(255, 255, 255, 0.9); font-size: 0.85rem; margin-bottom: 18px; }
         .btn-dark { background: #0A0F14; color: white; }
 
         /* Diferenciais */
-        .diff-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
-        .diff-card { background: var(--glass); padding: 18px; border-radius: 12px; border: var(--border); }
-        .diff-card h4 { font-size: 1.1rem; color: var(--primary); margin-bottom: 6px; font-weight: 600; }
-        .diff-card p { color: var(--text-light); font-size: 0.85rem; }
+        .diff-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+        .diff-card { background: var(--glass); padding: 14px; border-radius: 10px; border: var(--border); }
+        .diff-card h4 { font-size: 1rem; color: var(--primary); margin-bottom: 4px; font-weight: 600; }
+        .diff-card p { color: var(--text-light); font-size: 0.8rem; }
 
         /* Área de Atendimento */
-        .areas-wrapper { background: var(--glass); border: var(--border); border-radius: 12px; padding: 20px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
-        .area-tag { background: rgba(255,255,255,0.05); border: var(--border); padding: 6px 14px; border-radius: 50px; font-weight: 600; font-size: 0.85rem; color: #ffffff; }
+        .areas-wrapper { background: var(--glass); border: var(--border); border-radius: 12px; padding: 16px; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+        .area-tag { background: rgba(255,255,255,0.05); border: var(--border); padding: 5px 12px; border-radius: 50px; font-weight: 600; font-size: 0.8rem; color: #ffffff; }
 
         /* FAQ */
-        .faq-wrapper { width: 100%; display: flex; flex-direction: column; gap: 12px; }
-        .faq-item { background: var(--glass); border: var(--border); border-radius: 12px; padding: 16px; cursor: pointer; }
-        .faq-question { font-size: 0.95rem; font-weight: 600; color: #ffffff; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
-        .faq-question::after { content: '+'; color: var(--primary); font-size: 1.3rem; flex-shrink: 0; }
+        .faq-wrapper { display: flex; flex-direction: column; gap: 10px; }
+        .faq-item { background: var(--glass); border: var(--border); border-radius: 10px; padding: 14px; cursor: pointer; }
+        .faq-question { font-size: 0.9rem; font-weight: 600; color: #ffffff; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+        .faq-question::after { content: '+'; color: var(--primary); font-size: 1.2rem; }
         .faq-item.active .faq-question::after { content: '-'; }
-        .faq-answer { display: none; color: var(--text-light); font-size: 0.85rem; margin-top: 10px; }
+        .faq-answer { display: none; color: var(--text-light); font-size: 0.8rem; margin-top: 8px; }
         .faq-item.active .faq-answer { display: block; }
 
         /* Rodapé */
-        footer { padding: 30px 0; border-top: var(--border); margin-top: 30px; background: rgba(5, 8, 11, 0.5); }
-        .footer-wrapper { display: flex; flex-direction: column; text-align: center; gap: 20px; align-items: center; }
-        .footer-info p { color: var(--text-light); font-size: 0.85rem; margin-bottom: 12px; }
-        .footer-phone { font-size: 1.2rem; color: #ffffff; font-weight: 700; display: block; margin-bottom: 12px; text-decoration: none; }
+        footer { padding: 24px 0; border-top: var(--border); margin-top: 24px; background: rgba(5, 8, 11, 0.5); }
+        .footer-wrapper { display: flex; flex-direction: column; text-align: center; gap: 16px; align-items: center; }
+        .footer-info p { color: var(--text-light); font-size: 0.8rem; margin-bottom: 8px; }
+        .footer-phone { font-size: 1.1rem; color: #ffffff; font-weight: 700; display: block; margin-bottom: 8px; text-decoration: none; }
 
         /* Botão Flutuante */
-        .floating-wa { position: fixed; bottom: 20px; right: 20px; z-index: 999; background: var(--accent); color: white; width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); display: flex; align-items: center; justify-content: center; text-decoration: none; }
-        .floating-wa svg { width: 24px; height: 24px; fill: white; }
+        .floating-wa { position: fixed; bottom: 16px; right: 16px; z-index: 999; background: var(--accent); color: white; width: 48px; height: 48px; border-radius: 50%; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); display: flex; align-items: center; justify-content: center; text-decoration: none; }
+        .floating-wa svg { width: 22px; height: 22px; fill: white; }
 
-        /* Animação */
-        .reveal { opacity: 0; transform: translateY(15px); transition: opacity 0.4s ease, transform 0.4s ease; }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-
-        /* --- Regras para Computadores e Telas Maiores (Desktop) --- */
+        /* --- Telas Maiores (Desktop) --- */
         @media (min-width: 768px) {
             .container { padding: 0 24px; }
             section { padding: 80px 0 30px 0; }
             .section-title { font-size: 2.5rem; margin-bottom: 40px; }
+            .section-title::after { width: 50px; }
             .btn { width: auto; max-width: none; font-size: 1rem; padding: 16px 32px; }
             
-            header { padding: 15px 0; }
-            .logo img { width: 120px; }
-            header .btn { padding: 14px 28px; font-size: 0.95rem; }
+            header { padding: 12px 0; }
+            .logo img { width: 110px; }
+            header .btn { padding: 12px 24px; font-size: 0.9rem; }
 
-            #hero { padding-top: 130px; padding-bottom: 40px; }
-            .hero-wrapper { flex-direction: row; flex-wrap: nowrap; gap: 60px; }
-            .hero-content { flex: 1.2; min-width: auto; text-align: left; }
-            .hero-image { flex: 0.8; width: auto; }
-            h1 { font-size: 3.5rem; margin-bottom: 24px; }
-            .hero-text { font-size: 1.15rem; margin-bottom: 36px; }
-            .hero-image img { max-width: 380px; border-radius: 24px; }
+            #hero { padding-top: 120px; padding-bottom: 40px; }
+            .hero-wrapper { flex-direction: row; gap: 50px; align-items: center; }
+            .hero-content { flex: 1.2; }
+            .hero-image { flex: 0.8; }
+            h1 { font-size: 3.2rem; margin-bottom: 20px; }
+            .hero-text { font-size: 1.1rem; margin-bottom: 30px; }
+            .hero-image img { max-width: 360px; }
 
-            .services-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-            .card { padding: 32px 24px; border-radius: 16px; }
-            .card h3 { font-size: 1.35rem; }
-            .card p { font-size: 0.95rem; }
+            .services-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+            .card { padding: 24px; }
+            .card h3 { font-size: 1.25rem; }
+            .card p { font-size: 0.9rem; }
 
-            .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-            .gallery-item { height: 280px; border-radius: 16px; }
+            .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+            .gallery-item { height: 240px; }
 
-            #cta { padding: 60px 30px; margin: 40px 0; border-radius: 24px; }
-            #cta h2 { font-size: 2.5rem; }
-            #cta p { font-size: 1.15rem; }
+            #cta { padding: 50px 30px; margin: 40px 0; }
+            #cta h2 { font-size: 2.2rem; }
+            #cta p { font-size: 1.05rem; }
 
-            .diff-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-            .diff-card { padding: 24px; border-radius: 16px; }
-            .diff-card h4 { font-size: 1.2rem; }
-            .diff-card p { font-size: 0.9rem; }
+            .diff-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+            .diff-card { padding: 20px; }
 
-            .areas-wrapper { padding: 32px; gap: 12px; }
-            .area-tag { padding: 8px 20px; font-size: 0.95rem; }
+            .areas-wrapper { padding: 28px; gap: 10px; }
+            .area-tag { padding: 8px 18px; font-size: 0.9rem; }
 
-            .faq-item { padding: 20px; }
-            .faq-question { font-size: 1.05rem; }
-            .faq-answer { font-size: 0.95rem; }
-
-            footer { padding: 40px 0; margin-top: 40px; }
+            footer { padding: 40px 0; }
             .footer-wrapper { flex-direction: row; text-align: left; }
-            
-            .floating-wa { width: 56px; height: 56px; bottom: 24px; right: 24px; }
-            .floating-wa svg { width: 28px; height: 28px; }
         }
     </style>
 </head>
@@ -220,7 +186,7 @@
     <header>
         <div class="container nav">
             <div class="logo">
-                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&st=c64bttfj&raw=1" alt="Logo JTF Instalações Elétricas">
+                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&st=c64bttfj&raw=1" alt="Logo JTF Instalações Elétricas" width="90" height="35">
             </div>
             <a href="https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento&type=phone_number&app_absent=0" onclick="trackWA(event, this)" class="btn">Fazer Orçamento</a>
         </div>
@@ -237,13 +203,13 @@
                     <a href="https://api.whatsapp.com/send/?phone=5511993340680&text=Olá,+eu+desejo+fazer+um+orçamento&type=phone_number&app_absent=0" onclick="trackWA(event, this)" class="btn">Solicitar Orçamento no WhatsApp</a>
                 </div>
                 <div class="hero-image">
-                    <img src="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1" alt="Profissional JTF Instalações Elétricas" fetchpriority="high">
+                    <img src="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1" alt="Profissional JTF Instalações Elétricas" width="300" height="300" fetchpriority="high">
                 </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="reveal">
+        <section id="services">
             <h2 class="section-title">Nossos Serviços</h2>
             <div class="services-grid">
                 <div class="card">
@@ -286,30 +252,30 @@
         </section>
 
         <!-- Gallery Section -->
-        <section id="gallery" class="reveal">
+        <section id="gallery">
             <h2 class="section-title">Galeria de Serviços</h2>
             <div class="gallery-grid">
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="https://www.dropbox.com/scl/fi/ojasapfmkg0ohm0pa7ngq/WhatsApp-Image-2026-02-15-at-14.10.05.jpeg?rlkey=efcx0mjr0a5mpshwf3kb1omd1&st=i1lsy0f8&raw=1" alt="Instalação Elétrica JTF 1" loading="lazy">
+                    <img src="https://www.dropbox.com/scl/fi/ojasapfmkg0ohm0pa7ngq/WhatsApp-Image-2026-02-15-at-14.10.05.jpeg?rlkey=efcx0mjr0a5mpshwf3kb1omd1&st=i1lsy0f8&raw=1" alt="Instalação Elétrica JTF 1" loading="lazy" width="200" height="140">
                     <div class="gallery-overlay">🔍 Ampliar</div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="https://www.dropbox.com/scl/fi/lqgmhr3ncwe6gz5cpnp5d/WhatsApp-Image-2026-02-15-at-14.09.02.jpeg?rlkey=8ll4g9ms1f2h6wiaudw4eyxmj&st=x10rbybp&raw=1" alt="Instalação Elétrica JTF 2" loading="lazy">
+                    <img src="https://www.dropbox.com/scl/fi/lqgmhr3ncwe6gz5cpnp5d/WhatsApp-Image-2026-02-15-at-14.09.02.jpeg?rlkey=8ll4g9ms1f2h6wiaudw4eyxmj&st=x10rbybp&raw=1" alt="Instalação Elétrica JTF 2" loading="lazy" width="200" height="140">
                     <div class="gallery-overlay">🔍 Ampliar</div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="https://www.dropbox.com/scl/fi/rw16jndck62tpvfkzawru/WhatsApp-Image-2026-02-15-at-14.04.35.jpeg?rlkey=2tq0favcakuwq8jlywnhx16j5&st=n02c1obh&raw=1" alt="Instalação Elétrica JTF 3" loading="lazy">
+                    <img src="https://www.dropbox.com/scl/fi/rw16jndck62tpvfkzawru/WhatsApp-Image-2026-02-15-at-14.04.35.jpeg?rlkey=2tq0favcakuwq8jlywnhx16j5&st=n02c1obh&raw=1" alt="Instalação Elétrica JTF 3" loading="lazy" width="200" height="140">
                     <div class="gallery-overlay">🔍 Ampliar</div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="https://www.dropbox.com/scl/fi/krxx9k86t781dd30n7b1z/WhatsApp-Image-2026-02-15-at-14.04.34-2.jpeg?rlkey=mfpcd39g9boz2z5vonzsazm4a&st=main807a&raw=1" alt="Instalação Elétrica JTF 4" loading="lazy">
+                    <img src="https://www.dropbox.com/scl/fi/krxx9k86t781dd30n7b1z/WhatsApp-Image-2026-02-15-at-14.04.34-2.jpeg?rlkey=mfpcd39g9boz2z5vonzsazm4a&st=main807a&raw=1" alt="Instalação Elétrica JTF 4" loading="lazy" width="200" height="140">
                     <div class="gallery-overlay">🔍 Ampliar</div>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section id="cta-section" class="reveal">
+        <section id="cta-section">
             <div id="cta">
                 <h2>Segurança elétrica não se deixa para depois!</h2>
                 <p>Evite panes elétricas e curtos perigosos. Faça uma revisão imediata no sistema da sua residência com quem entende do assunto.</p>
@@ -318,7 +284,7 @@
         </section>
 
         <!-- Diferenciais Section -->
-        <section id="diferenciais" class="reveal">
+        <section id="diferenciais">
             <h2 class="section-title">Nossos Diferenciais</h2>
             <div class="diff-grid">
                 <div class="diff-card">
@@ -345,7 +311,7 @@
         </section>
 
         <!-- Área de Atendimento -->
-        <section id="atendimento" class="reveal">
+        <section id="atendimento">
             <h2 class="section-title">Áreas de Atendimento</h2>
             <div class="areas-wrapper">
                 <span class="area-tag">Itapevi</span>
@@ -358,7 +324,7 @@
         </section>
 
         <!-- FAQ Section -->
-        <section id="faq" class="reveal">
+        <section id="faq">
             <h2 class="section-title">Perguntas Frequentes</h2>
             <div class="faq-wrapper">
                 <div class="faq-item" onclick="toggleFaq(this)">
@@ -381,7 +347,7 @@
     <footer>
         <div class="container footer-wrapper">
             <div class="footer-info">
-                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&st=c64bttfj&raw=1" alt="Logo JTF Footer" style="height: 40px; margin-bottom: 12px; border-radius: 6px;">
+                <img src="https://www.dropbox.com/scl/fi/zgoumi0y5zm1b9cqvlv2n/Logo-JTF.jpg?rlkey=6rf52kf024txybhlfvk6xl4v3&st=c64bttfj&raw=1" alt="Logo JTF Footer" width="100" height="40" style="margin-bottom: 12px; border-radius: 6px;">
                 <p>JTF Instalações Elétricas – Segurança e confiança para todos os serviços elétricos no estado de São Paulo.</p>
             </div>
             <div>
@@ -403,7 +369,35 @@
         <img id="lightbox-img" src="" alt="Imagem Ampliada">
     </div>
 
+    <!-- Scripts de Rastreamento (Carregados após a página carregar para não travar a nota) -->
     <script>
+        window.addEventListener('load', function() {
+            // Google Analytics
+            var gtagScript = document.createElement('script');
+            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-46H2TRPXJT";
+            gtagScript.async = true;
+            document.head.appendChild(gtagScript);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-46H2TRPXJT', {send_page_view:true});
+
+            // Meta Pixel
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}
+            (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1404418101709575');
+            fbq('track', 'PageView');
+        });
+
         function trackWA(event, element) {
             if (event) event.preventDefault();
             const url = element.href;
@@ -453,20 +447,6 @@
                 element.classList.add('active');
             }
         }
-
-        // Scroll Reveal
-        document.addEventListener("DOMContentLoaded", () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        });
     </script>
 </body>
 </html>
