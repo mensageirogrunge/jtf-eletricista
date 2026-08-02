@@ -8,16 +8,8 @@
     
     <!-- Conexões Prévias -->
     <link rel="dns-prefetch" href="https://www.dropbox.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.dropbox.com" crossorigin>
-
-    <!-- Google Analytics Direct -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-46H2TRPXJT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-46H2TRPXJT');
-    </script>
 
     <!-- Preload da Imagem Principal do Hero -->
     <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1" fetchpriority="high">
@@ -369,8 +361,24 @@
         <img id="lightbox-img" src="" alt="Imagem Ampliada">
     </div>
 
-    <!-- Scripts de Interatividade e Rastreamento de Cliques -->
+    <!-- Scripts Otimizados e Rastreamento -->
     <script>
+        // Inicializa fila do Google Analytics sem bloquear a renderização (High Performance)
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-46H2TRPXJT');
+
+        // Carrega o script externo sem impactar no PageSpeed
+        (function() {
+            var script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-46H2TRPXJT';
+            script.async = true;
+            document.head.appendChild(script);
+        })();
+
+        // Rastreamento de conversão do WhatsApp
         function trackWA(event, element) {
             if (event) event.preventDefault();
             const url = element.href;
@@ -384,7 +392,7 @@
                 });
                 setTimeout(function() {
                     window.location.href = url;
-                }, 500);
+                }, 400);
             } else {
                 window.location.href = url;
             }
