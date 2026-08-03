@@ -18,7 +18,7 @@
     <meta property="og:description" content="Serviços elétricos profissionais. Atendimento em Itapevi e região. Segurança e garantia para sua casa.">
     <meta property="og:type" content="website">
 
-    <!-- Schema.org LocalBusiness com Avaliação -->
+    <!-- Schema.org LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -31,12 +31,7 @@
         "addressCountry": "BR"
       },
       "telephone": "+5511993340680",
-      "url": "#",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "48"
-      }
+      "url": "#"
     }
     </script>
 
@@ -49,7 +44,7 @@
             --text-light: #a0a0a0;
             --glass: rgba(255, 255, 255, 0.04);
             --border: 1px solid rgba(255, 255, 255, 0.08);
-            --star-color: #FBBF24;
+            --star-color: #FFD700;
         }
 
         /* Reset e Base - Fonte nativa de alto desempenho */
@@ -78,7 +73,7 @@
         #hero { padding-top: 72px; padding-bottom: 16px; }
         .hero-wrapper { display: flex; flex-direction: column; gap: 16px; width: 100%; }
         .hero-content { width: 100%; }
-        .hero-image { width: 100%; display: flex; flex-direction: column; align-items: center; min-height: 280px; }
+        .hero-image { width: 100%; display: flex; justify-content: center; min-height: 280px; }
         
         .tagline { color: var(--primary); text-transform: uppercase; font-weight: 700; font-size: 0.75rem; letter-spacing: 1.2px; margin-bottom: 6px; display: block; }
         h1 { font-size: 1.75rem; line-height: 1.2; margin-bottom: 10px; color: #ffffff; font-weight: 700; }
@@ -86,32 +81,6 @@
         .hero-text { font-size: 0.92rem; color: var(--text-light); margin-bottom: 18px; }
         
         .hero-image img { width: 280px; height: 280px; border-radius: 16px; border: 1px solid rgba(249, 115, 22, 0.3); object-fit: cover; aspect-ratio: 1/1; }
-
-        /* Componente de Estrelas / Avaliações */
-        .rating-box {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--glass);
-            border: var(--border);
-            padding: 6px 14px;
-            border-radius: 20px;
-            margin-top: 12px;
-        }
-        .rating-stars {
-            color: var(--star-color);
-            font-size: 1rem;
-            letter-spacing: 2px;
-        }
-        .rating-score {
-            font-weight: 700;
-            color: #ffffff;
-            font-size: 0.85rem;
-        }
-        .rating-count {
-            color: var(--text-light);
-            font-size: 0.78rem;
-        }
 
         /* Grid de Serviços */
         .services-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
@@ -121,7 +90,7 @@
 
         /* Galeria Mobile 2 Colunas */
         .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-        .gallery-item { height: 130px; overflow: hidden; border-radius: 10px; border: var(--border); position: relative; background: #121820; cursor: pointer; }
+        .gallery-item { height: 130px; overflow: hidden; border-radius: 10px; border: var(--border); position: relative; background: #121820; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
 
         /* Lightbox */
@@ -140,6 +109,31 @@
         .diff-card { background: var(--glass); padding: 12px 14px; border-radius: 10px; border: var(--border); }
         .diff-card h4 { font-size: 0.95rem; color: var(--primary); margin-bottom: 2px; font-weight: 600; }
         .diff-card p { color: var(--text-light); font-size: 0.8rem; }
+
+        /* Avaliações e Estrelas */
+        .reviews-container { display: flex; flex-direction: column; gap: 20px; }
+        .reviews-list { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        .review-card { background: var(--glass); border: var(--border); border-radius: 12px; padding: 16px; }
+        .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .review-author { font-weight: 600; color: #ffffff; font-size: 0.95rem; }
+        .stars { color: var(--star-color); font-size: 1rem; }
+        .review-text { font-size: 0.85rem; color: var(--text-light); }
+
+        /* Formulário de Comentários */
+        .review-form { background: var(--glass); border: var(--border); border-radius: 12px; padding: 16px; }
+        .review-form h3 { font-size: 1.1rem; color: #ffffff; margin-bottom: 12px; font-weight: 600; }
+        .form-group { margin-bottom: 12px; }
+        .form-group label { display: block; font-size: 0.8rem; color: var(--text-light); margin-bottom: 4px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; background: rgba(0, 0, 0, 0.3); border: var(--border); border-radius: 8px; color: #ffffff; font-size: 0.88rem; font-family: inherit; }
+        .form-group textarea { resize: vertical; min-height: 80px; }
+        
+        /* Seleção Interativa de Estrelas */
+        .star-rating { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 4px; font-size: 1.5rem; }
+        .star-rating input { display: none; }
+        .star-rating label { color: #444; cursor: pointer; transition: color 0.2s; }
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input:checked ~ label { color: var(--star-color); }
 
         /* Área de Atendimento */
         .areas-wrapper { background: var(--glass); border: var(--border); border-radius: 12px; padding: 14px; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
@@ -199,6 +193,8 @@
             .diff-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
             .diff-card { padding: 18px; }
 
+            .reviews-container { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
             .areas-wrapper { padding: 24px; gap: 10px; }
             .area-tag { padding: 8px 18px; font-size: 0.9rem; }
 
@@ -231,13 +227,6 @@
                 </div>
                 <div class="hero-image">
                     <img src="https://www.dropbox.com/scl/fi/x7rcucqud3o5nfx8yt3c2/WhatsApp-Image-2026-02-15-at-14.16.28.jpeg?rlkey=89doqayodui2snssupshnr3mc&st=l8pv3c2b&raw=1" alt="Profissional JTF Instalações Elétricas" width="280" height="280" fetchpriority="high" decoding="async">
-                    
-                    <!-- Sistema de Estrelas / Avaliação -->
-                    <div class="rating-box">
-                        <span class="rating-stars">★★★★★</span>
-                        <span class="rating-score">5.0</span>
-                        <span class="rating-count">(48 avaliações)</span>
-                    </div>
                 </div>
             </div>
         </section>
@@ -340,6 +329,49 @@
             </div>
         </section>
 
+        <!-- Avaliações dos Clientes -->
+        <section id="reviews">
+            <h2 class="section-title">Avaliações dos Clientes</h2>
+            <div class="reviews-container">
+                <!-- Lista de Avaliações Exibidas -->
+                <div class="reviews-list" id="reviews-list">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-author">Anderson Thiago</span>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">Excelente serviço! O profissional fez a instalação do chuveiro com muita atenção aos detalhes, testando a fiação e deixando tudo seguro. Recomendo demais!</p>
+                    </div>
+                </div>
+
+                <!-- Formulário para novos comentários e estrelas -->
+                <div class="review-form">
+                    <h3>Deixe sua Avaliação</h3>
+                    <form id="commentForm" onsubmit="addComment(event)">
+                        <div class="form-group">
+                            <label for="authorName">Seu Nome:</label>
+                            <input type="text" id="authorName" required placeholder="Digite seu nome">
+                        </div>
+                        <div class="form-group">
+                            <label>Sua Nota:</label>
+                            <div class="star-rating">
+                                <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 estrelas">★</label>
+                                <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 estrelas">★</label>
+                                <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 estrelas">★</label>
+                                <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 estrelas">★</label>
+                                <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 estrella">★</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="commentText">Seu Comentário:</label>
+                            <textarea id="commentText" required placeholder="Conte como foi o atendimento do serviço prestado..."></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%; border-radius: 8px; padding: 10px;">Enviar Avaliação</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!-- Área de Atendimento -->
         <section id="atendimento">
             <h2 class="section-title">Áreas de Atendimento</h2>
@@ -399,7 +431,7 @@
         <img id="lightbox-img" src="" alt="Imagem Ampliada">
     </div>
 
-    <!-- Scripts de Tracking Ultra-Deferidos -->
+    <!-- Scripts de Tracking e Lógica -->
     <script>
         var scriptsLoaded = false;
         function loadAnalytics() {
@@ -487,6 +519,30 @@
             if (!isActive) {
                 element.classList.add('active');
             }
+        }
+
+        // Função para adicionar comentário dinamicamente
+        function addComment(event) {
+            event.preventDefault();
+            const name = document.getElementById('authorName').value;
+            const rating = document.querySelector('input[name="rating"]:checked').value;
+            const text = document.getElementById('commentText').value;
+
+            const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+
+            const newReview = document.createElement('div');
+            newReview.className = 'review-card';
+            newReview.innerHTML = `
+                <div class="review-header">
+                    <span class="review-author">${name}</span>
+                    <div class="stars">${stars}</div>
+                </div>
+                <p class="review-text">${text}</p>
+            `;
+
+            document.getElementById('reviews-list').prepend(newReview);
+            document.getElementById('commentForm').reset();
+            alert('Obrigado pela sua avaliação!');
         }
     </script>
 </body>
